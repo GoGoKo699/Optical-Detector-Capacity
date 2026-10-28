@@ -51,14 +51,24 @@ Start with the [physical model and claims](science/model.md), then follow the [c
 
 The collective optical capacity is inherited from the [partial-monitoring analysis](https://github.com/GoGoKo699/Partial-Monitoring-Capacity/tree/447726d37438de67b4ef2e1a9406d2c44d6a394f). The detector-class comparison, its uniform counting converse, and the constant-gap single-mode construction are the subject here.
 
+## Learn the project
+
+The single educational anchor is **John Preskill, *Quantum Shannon Theory*, Chapter 10, arXiv:1604.07450v5** (updated June 2025; posted 8 July 2025). The [learning entrance](learning/README.md) gives a focused route rather than a whole-chapter assignment.
+
+The [30-milestone map](learning/MILESTONES.md) connects **14 background/preliminaries milestones** to **16 narrative/innovation milestones**. It progresses from optical states and entropy to the complete detector-capacity comparison. Every milestone has an understanding target, earlier dependencies, a conceptual connection, and source pointers.
+
+The [Preskill bridge](learning/PRESKILL_BRIDGE.md) translates notation, works through an explicit counting channel, and explains the additional optical, finite-energy, and detector arguments. In particular, Preskill's one-use coherent-information quantity is not this project's individual-mode helper capacity. The science pages remain the authoritative proofs; the learning route does not replace their assumptions or primary-source attribution.
+
 ## Reproduce
 
 ```bash
 python -m pip install -r verification/requirements.txt
 python verification/verify.py
+python verification/check_learning.py
+python -m unittest discover -s verification -p "test_learning.py" -v
 ```
 
-The runner checks finite channel identities, complete finite POVMs, entropy inequalities, and the rational rate certificate. Written proofs establish the arbitrary-input and asymptotic statements. [Verification scope](verification/README.md) distinguishes these roles.
+The runner checks finite channel identities, complete finite POVMs, entropy inequalities, and the rational rate certificate. The [learning checks](learning/README.md#reproduce-the-learning-checks) validate the milestone structure, links, and worked examples. Written proofs establish the arbitrary-input and asymptotic statements. [Verification scope](verification/README.md) distinguishes these roles. The [review record](verification/FURNISHING_CHECK.md) states performed checks and remaining display-verification limits.
 
 ## Scope
 
