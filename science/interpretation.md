@@ -26,6 +26,14 @@ The energy parameter counts incident signal photons. A phase reference and gener
 
 The baseline is number-diagonal measurement in the original collected-mode basis. A coherent multimode interferometer followed by counting, a nonlinear preprocessor, or coherent delivery of the collected field changes that access model. The result does not impose the counting ceiling on those resources.
 
+The [finite-reference realization](finite_reference.md) supplies the prescribed
+Fourier gate using conserving sector controls and a finite prepared sine state.
+The matching initial-stock scaling for uniformly implementing that gate is an
+application of an established energy theorem. It is not a lower bound on every
+measurement with the same output statistics or on every detector attaining the
+optical communication rate. Fresh references preserve memorylessness; their
+preparation work, reset, and repeated-use behavior require additional analysis.
+
 Photon counting is itself a non-Gaussian measurement. The separation is therefore not a no-go theorem for Gaussian measurements or a generic claim that non-Gaussian operations suffice. The constructed coherent POVM is one successful family; optimal Gaussian-helper capacity is not established here.
 
 Vacuum auxiliary inputs, memoryless loss, accurate known fractions, unconditional transmission, and receiver-only classical assistance are consequential premises. Thermal background noise, a drifting phase reference, finite classical bandwidth, finite-block fidelity, and physical detector synthesis require separate analyses. No claim about their behavior is needed for the stated capacity theorem.

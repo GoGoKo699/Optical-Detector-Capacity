@@ -20,8 +20,9 @@ Preserve these distinctions:
 - Counting means number-diagonal measurement before classical postprocessing;
   coherent preprocessing changes the detector class.
 - Individual-mode helper measurements do not restrict endpoint block coding.
-- The local POVM can use one selected quadratic-phase Fourier setting with O(d) coded outcomes at cutoff dimension d. Physical gate efficiency and reference/control costs remain unproved. science/qubit_optical_bridge.md certifies counting suboptimality under a two-photon cutoff, not an upper bound on full-Fock counting.
-- science/detector_resources.md gives explicit cutoff and sufficient phase/Fourier accuracy, the matched log(L) leading classical-record cost, and a mean-excitation account for the specified Fourier stage. The record converse prices the actual finite/countable message, including every announced setting; it is a weak converse and does not solve the full finite-energy rate tradeoff.
+- The local POVM can use one selected quadratic-phase Fourier setting with O(d) coded outcomes at cutoff dimension d. Physical gate efficiency, reference preparation work, and reset costs remain unproved. science/qubit_optical_bridge.md certifies counting suboptimality under a two-photon cutoff, not an upper bound on full-Fock counting.
+- science/detector_resources.md gives explicit cutoff and sufficient phase/Fourier accuracy, the uniform additive tradeoff Q(E,r)=min(r,log2 L)+O_a(1), and a mean-excitation account for the specified Fourier stage. The record converse prices the actual finite/countable message, including every announced setting; it is a weak converse, not an exact finite-energy frontier.
+- science/finite_reference.md applies established finite sine-battery/conserving-lift machinery. Initial mean reference photons have matching order q/sqrt(epsilon) for uniformly implementing the prescribed q-level gate. The optical capacity consequence is a sufficient fresh-reference budget O((L+1)sqrt(ln(L+2))) at fixed additive tolerances. No matching lower bound over all capacity-achieving measurements, efficient synthesis, exact catalyst return, or indefinite reuse is claimed.
 - The collective optical capacity is inherited, not a second novelty claim.
 - The half-log law is uniform for fixed 0<a<1, E>=1 and 0<=b<=min(a,1-a)/2.
 - All capacities vanish at a<=b. With c=0 they reduce to ordinary pure loss.

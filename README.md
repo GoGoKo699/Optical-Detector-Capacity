@@ -26,6 +26,8 @@ The [structured detector construction](science/coherent_measurements.md) retains
 
 The [resource account](science/detector_resources.md) makes the cutoff and accuracy quantitative. At fixed additive tolerance, $`O(L+1)`$ cutoff levels and $`\log_2L+O(1)`$ helper record bits per mode suffice; recovering the full leading rate requires that same leading record cost. It also bounds rate loss from detector error and accounts for the specified Fourier stage's change in mean photon number.
 
+With a helper record budget $`r_c`$, the [rate tradeoff](science/detector_resources.md) is $`Q(E,r_c)=\min\{r_c,\log_2L\}+O_a(1)`$ for fixed received fraction $`a`$, $`a>b`$, and $`L\ge1`$. A [finite-reference realization](science/finite_reference.md) supplies the prescribed Fourier gate using number-conserving control and a finite sine reference. Its initial reference mean has order $`q/\sqrt\varepsilon`$ for small uniform gate error $`\varepsilon`$ in half diamond distance; this gate-level resource bound does not determine the minimum reference needed by every capacity-achieving measurement.
+
 ## Finite-energy separation
 
 At $`a=1/4`$, $`b=1/10000`$, and $`E=10^6`$:
@@ -50,6 +52,7 @@ Start with the [physical model and claims](science/model.md), then follow the [c
 | How can one collected mode retain the full leading rate? | [Finite coherent POVM](science/coherent_measurements.md) |
 | Where does the qubit counting optimum first fail? | [Two-photon separation](science/qubit_optical_bridge.md) |
 | What cutoff, record length, and control accuracy suffice? | [Detector resources](science/detector_resources.md) |
+| Can a finite phase reference implement this detector? | [Conserving realization and reference budget](science/finite_reference.md) |
 | What is uniform as energy and inaccessible loss vary? | [Uniform laws](science/uniform_laws.md) |
 | What changes physically, and what remains outside the result? | [Interpretation](science/interpretation.md) |
 | Which ingredients and comparisons are inherited? | [Related work](references/RELATED_WORK.md) |

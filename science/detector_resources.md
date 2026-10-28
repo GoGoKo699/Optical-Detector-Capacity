@@ -187,8 +187,106 @@ $`\log_2[a/(1-a)]`$ otherwise. Therefore reaching
 $`\log_2L-O_a(1)`$ qubits per mode requires
 $`r_c\ge\log_2L-O_a(1)`$. The finite detector above supplies
 $`r_c\le\log_2L+O(1)`$ at fixed additive tolerance. The leading helper record
-cost is consequently necessary and sufficient. This does not characterize the
-whole finite-energy tradeoff $`Q(E,r_c)`$.
+cost is consequently necessary and sufficient. An exact finite-energy frontier
+remains open; the following bounds characterize it to an additive constant.
+
+## The finite record tradeoff to an additive constant
+
+The same construction gives a uniform additive characterization throughout the
+record budget. Assume $`a>b\ge0`$, fixed $`0<a<1`$, $`L=\min\{E,1/b\}\ge1`$
+and $`r_c\ge0`$. Define constants depending only on the received fraction,
+
+```math
+C_a=7+\log_2(1/a),\qquad
+k_a=\max\{0,\log_2[a/(1-a)]\},\qquad
+D_a=\max\{k_a,g(a)\}.
+```
+
+Then
+
+```math
+\boxed{
+\begin{aligned}
+\max\{Q_0(E),\ \min\{r_c,\log_2L\}-C_a\}
+&\le Q(E,r_c)\\
+&\le\min\{Q_{\rm coll}(E),Q_0(E)+r_c\}\\
+&\le\min\{r_c,\log_2L\}+D_a.
+\end{aligned}}
+```
+
+The lower bound uses one predetermined individual-mode detector; the upper bound
+permits collective helper measurements and arbitrary endpoint codes. These are
+additive bounds, not an exact finite-energy capacity formula. The constants are
+explicit conservative choices, rather than optimized detector overheads.
+
+For $`r_c\ge3`$, spend only the useful energy compatible with the record:
+
+```math
+x=\min\{L,2^{r_c-3}\}\ge1,\qquad
+M=\lceil x\rceil,\qquad d=M+1.
+```
+
+Use the normalized thermal state of mean $`x`$ truncated to $`0,\ldots,M`$.
+Its retained mass $`p=1-[x/(1+x)]^d`$ is greater than $`1/2`$: Bernoulli's
+inequality gives $`(1+1/x)^d\ge1+d/x>2`$. The input mean is strictly below
+$`x\le L\le E`$, so there is signal-energy slack for coding. Also $`bx\le1`$.
+The positive-operator estimate from the finite-cutoff argument gives
+
+```math
+C_d\le\frac1{p^2}
+\left[\frac1{1+2ax}+\frac1{1+2(1-b)x}\right]
+\le\frac4{ax},\qquad
+S(Z_d)\le g(bx)\le2.
+```
+
+Here $`1-b\ge a`$ was used. The selected quadratic-phase Fourier detector
+therefore has coherent information
+
+```math
+I_c\ge-\log_2C_d-S(Z_d)
+\ge\log_2x+\log_2a-4
+\ge\min\{r_c,\log_2L\}-C_a.
+```
+
+Its smallest odd prime $`q\ge d`$ satisfies $`q<2d`$. Including the outside
+outcome in the alphabet still leaves strict record-rate slack:
+
+```math
+q+1<2x+5\le7x\le\frac78\,2^{r_c}.
+```
+
+The selected setting is fixed and known before transmission. Every $`n`$-symbol
+transcript can be encoded injectively in
+$`\lceil n\log_2(q+1)\rceil`$ bits, which is at most $`nr_c`$ for sufficiently
+large $`n`$. This is lossless encoding of the entire transcript; rounding each
+symbol separately to $`\lceil\log_2(q+1)\rceil`$ bits is unnecessary. It also
+directly meets the Shannon budget since $`H(Y)\le n\log_2(q+1)<nr_c`$.
+No record distribution assumption or omitted outcome is needed for this bound.
+The outside outcome has zero probability on the code support, but is included
+in the alphabet estimate anyway.
+
+For $`r_c<3`$, $`\min\{r_c,\log_2L\}-C_a<0`$, and the no-helper scheme
+suffices for that part of the bound. The no-helper capacity $`Q_0(E)`$ is
+achievable at every budget. Taking the better of the no-helper scheme and the
+fixed detector proves the lower maximum without requiring time sharing.
+
+For the last upper inequality, $`Q_0(E)\le k_a`$. If $`L=E\ge1`$, then
+$`g(aE)-\log_2E`$ decreases with $`E`$, so
+$`Q_{\rm coll}(E)\le g(aE)\le\log_2L+g(a)`$. If $`L=1/b\le E`$, the
+loss ceiling gives $`Q_{\rm coll}(E)\le\log_2(a/b)\le\log_2L`$. These two
+cases, including $`b=0`$ in the first, combine with the record converse.
+
+Thus, uniformly over $`r_c\ge0`$ and $`L\ge1`$ at fixed $`a`$,
+
+```math
+Q(E,r_c)=\min\{r_c,\log_2L\}+O_a(1).
+```
+
+In particular, if $`r_c=\alpha\log_2L+O(1)`$ for fixed $`\alpha\ge0`$,
+the leading rate is $`\min\{\alpha,1\}\log_2L+O_a(1)`$, with the bounded
+budget offset included in the additive constant. The statement prices the
+transmitted classical record; it does not price coherent control, a phase
+reference, apparatus energy, or decoder complexity.
 
 ## Sufficient control accuracy
 
@@ -292,7 +390,11 @@ $`\hbar\omega\Delta\langle\hat n_D\rangle`$ of mean oscillator energy.
 This is an account of the specified ideal Fourier stage on its average input.
 It is not a universal detector energy lower bound and excludes reference
 preparation, reset, discarded apparatus systems, and control synthesis. The
-base signal budget still counts incident photons only.
+base signal budget still counts incident photons only. The
+[finite-reference realization](finite_reference.md) supplies this stage by an
+exactly conserving joint control, prices a finite initial reference stock, and
+tracks the corresponding energy transfer. Preparing and resetting that stock
+and synthesizing the control are separate costs.
 
 ## Verification
 

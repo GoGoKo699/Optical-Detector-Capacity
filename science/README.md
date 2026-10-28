@@ -21,3 +21,9 @@ The [model](model.md) owns all resources and the meanings of $`Q_{\rm cnt},Q_1,Q
 | Constant gap and uniform exponents | The preceding finite inequalities and elementary bounds on thermal entropy |
 
 Primary coding and assistance theorems retain their [attribution](../references/RELATED_WORK.md). Finite matrix calculations do not prove channel coding. The construction's finite support is used for achievability only; the converse never restricts competing inputs to that support.
+
+The resource extensions also give the classical-record tradeoff to a uniform
+additive constant. The [finite reference](finite_reference.md) applies an
+established conserving gate construction and energy theorem to the prescribed
+Fourier detector, and keeps that gate-level result distinct from the capacity
+optimization over all possible measurements.

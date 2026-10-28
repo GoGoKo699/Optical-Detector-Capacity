@@ -30,6 +30,12 @@ The [resource account](../science/detector_resources.md) also applies Lemma 2 di
 
 ## Closest optical measurement comparisons
 
+### Finite references and conserving implementations
+
+Åberg, [Catalytic Coherence](https://arxiv.org/abs/1304.1060), Physical Review Letters **113**, 150402 (2014), gives the shift lift in Eq. (1) and treats the bounded-below ladder. Chiribella, Yang, and Renner, [Fundamental energy requirement of reversible quantum operations](https://arxiv.org/abs/1908.10884), Physical Review X **11**, 021014 (2021), Section IV, supplies a finite sine reference and conserving total-energy-sector implementation. Appendix A, Corollary 3, and Appendix D establish the gate-energy lower bound and its diamond-error formulation. Navascués and Popescu, [How energy conservation limits our measurements](https://arxiv.org/abs/1211.2101), Physical Review Letters **112**, 140502 (2014), derives apparatus-dependent measurement constraints; Eq. (15) expresses the role of battery coherences and Appendix E gives the sine state.
+
+These apparatus constructions and general energy theorems are inherited. The [finite-reference account](../science/finite_reference.md) specializes them to the optical detector, derives an explicit reduced-channel error bound, and combines it with the existing coding accuracy estimate. The matching energy order concerns the prescribed unitary, not all measurements or capacity-achieving detectors. The record tradeoff is a separate application of the classical-message converse and finite-cutoff detector; it is not inferred from a battery theorem.
+
 ### Memarzadeh, Cafaro, and Mancini (2011)
 
 [Quantum information reclaiming after amplitude damping](https://arxiv.org/pdf/1004.0497), Journal of Physics A **44**, 045304. Section 4.2, Eqs. (41)–(42) and (52)–(54), mixes zero- and two-photon environmental outcomes at equal magnitude and leaves the one-photon outcome unchanged. It improves corrected entanglement fidelity in the qutrit loss model with full environmental access. That detector and qualitative qubit/qutrit contrast precede the [finite-cutoff example](../science/qubit_optical_bridge.md). The latter comparison uses inaccessible residual loss and an achievable unconditional rate exceeding a converse for all counting codes. The primary loss model and relevant equations were inspected; this targeted comparison does not imply exhaustive priority certification.
