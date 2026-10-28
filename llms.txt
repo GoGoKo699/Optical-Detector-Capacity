@@ -27,3 +27,21 @@ Preserve these distinctions:
 - No exact finite-energy counting optimum or exact individual-mode capacity is given.
 - Finite checks support their tested ingredients; written proofs and cited coding
   theorems establish arbitrary-input and asymptotic statements.
+
+Learning route:
+- learning/README.md: entrypoint, selected source version, reading order and checks.
+- learning/MILESTONES.md: exactly M01-M30, with 14 background/preliminaries and
+  16 narrative/innovation targets, earlier dependencies and scientific pointers.
+- learning/PRESKILL_BRIDGE.md: John Preskill, Quantum Shannon Theory, Chapter 10,
+  arXiv:1604.07450v5 (updated June 2025, posted 8 July 2025); section map,
+  notation translation, a worked flagged-counting example, optical entropy,
+  detector mechanisms, finite-cutoff coding and crossover limits.
+- verification/check_learning.py and verification/test_learning.py: repeatable
+  checks of the shared map, navigation, source pin and worked calculations.
+
+Preskill's Q_1 is a one-use optimized coherent-information quantity. Here Q_1(E)
+is an asymptotic capacity with individual-mode helper POVMs and arbitrary endpoint
+block codes. Preskill's environment E must not be confused with our energy E;
+after a rank-one helper measurement the actual complement includes Z and a copied
+classical flag. The chapter is a foundation, not a source of the detector theorem.
+The common route contains no personal assessment procedure or learner records.
