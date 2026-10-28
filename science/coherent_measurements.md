@@ -114,7 +114,7 @@ D_s|k\rangle=\zeta^{-sk^2}|k\rangle,
 
 Apply $`\mathcal F_qD_s`$ and count the output number. Its effects restricted to the input code support $`k<d`$ are exactly $`F_{r|s}`$. Extend the unitary by the identity outside the first $`q`$ levels and retain an outside outcome; its probability is zero for this cutoff code. This implements the required measurement on the coded states, even when $`d<q`$; equality with a particular extension of the POVM on all other states is not required. Alternatively, use prime cutoffs $`d=q`$ throughout. Unbounded prime cutoffs suffice for the thermal limit.
 
-The quadratic phase is a Kerr-type number-squared phase; the relation between Kerr evolution and phase measurements is already explicit in Eq. (15) of the cited continuous-variable-design paper. A finite Fock-space Fourier transform still requires coherent control and a phase reference. The construction bounds the number of settings, occupied levels, and classical outcomes, rather than the physical gate count, reference energy, work, reset cost, or robustness to control error. The Fourier stage may change photon number; detector energy remains outside the signal budget. A selected setting needs at most $`\lceil\log_2q\rceil`$ record bits on the coded support, or an alphabet of $`q+1`$ symbols including the outside outcome. The choice of $`s_*`$ can depend on the cutoff and channel; a single setting uniform in every energy and accuracy is not asserted.
+The quadratic phase is a Kerr-type number-squared phase; the relation between Kerr evolution and phase measurements is already explicit in Eq. (15) of the cited continuous-variable-design paper. A finite Fock-space Fourier transform still requires coherent control and a phase reference. The construction bounds the number of settings, occupied levels, and classical outcomes. The [resource account](detector_resources.md) adds sufficient accuracy bounds and the Fourier stage's specified mean excitation change; physical gate count, reference preparation, work, and reset cost remain unresolved. Detector energy remains outside the signal budget. A selected setting needs at most $`\lceil\log_2q\rceil`$ record bits on the coded support, or an alphabet of $`q+1`$ symbols including the outside outcome. The choice of $`s_*`$ can depend on the cutoff and channel; a single setting uniform in every energy and accuracy is not asserted.
 
 ## Removing the cutoff with the signal budget intact
 
@@ -139,7 +139,7 @@ R_1(E)=-\log_2\!\left[
 \frac1{1+2aE}+\frac1{1+2(1-b)E}\right]-g(bE).
 ```
 
-At zero energy the capacity is zero. The displayed bound is a supremum-limit statement: any strictly smaller positive rate is attained by some finite cutoff and finite detector followed by sufficiently long codes. It does not specify a practical cutoff or gate count.
+At zero energy the capacity is zero. The displayed bound is a supremum-limit statement: any strictly smaller positive rate is attained by some finite cutoff and finite detector followed by sufficiently long codes. The [resource account](detector_resources.md) supplies an explicit sufficient cutoff and control-error estimate. Physical gate count remains unresolved.
 
 ## At most a constant is left for collective helper processing
 

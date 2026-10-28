@@ -24,6 +24,8 @@ Thus joint processing across collected modes improves on the best individual-mod
 
 The [structured detector construction](science/coherent_measurements.md) retains this rate guarantee using one preselected quadratic phase followed by a finite Fock-space Fourier measurement. At cutoff dimension $`d\ge2`$, fewer than $`2d`$ outcomes have nonzero probability on the coded support. The [qubit-to-optical bridge](science/qubit_optical_bridge.md) also shows that a three-outcome detector already beats optimized counting when inputs are restricted to at most two photons.
 
+The [resource account](science/detector_resources.md) makes the cutoff and accuracy quantitative. At fixed additive tolerance, $`O(L+1)`$ cutoff levels and $`\log_2L+O(1)`$ helper record bits per mode suffice; recovering the full leading rate requires that same leading record cost. It also bounds rate loss from detector error and accounts for the specified Fourier stage's change in mean photon number.
+
 ## Finite-energy separation
 
 At $`a=1/4`$, $`b=1/10000`$, and $`E=10^6`$:
@@ -47,6 +49,7 @@ Start with the [physical model and claims](science/model.md), then follow the [c
 | Why does counting have the half-logarithmic law? | [Counting bounds and construction](science/counting_bounds.md) |
 | How can one collected mode retain the full leading rate? | [Finite coherent POVM](science/coherent_measurements.md) |
 | Where does the qubit counting optimum first fail? | [Two-photon separation](science/qubit_optical_bridge.md) |
+| What cutoff, record length, and control accuracy suffice? | [Detector resources](science/detector_resources.md) |
 | What is uniform as energy and inaccessible loss vary? | [Uniform laws](science/uniform_laws.md) |
 | What changes physically, and what remains outside the result? | [Interpretation](science/interpretation.md) |
 | Which ingredients and comparisons are inherited? | [Related work](references/RELATED_WORK.md) |
@@ -76,7 +79,7 @@ The runner checks finite channel identities, complete finite POVMs, entropy ineq
 
 ## Scope
 
-The model assumes vacuum ancillary inputs, memoryless splitting, unlimited reliable helper-to-receiver classical communication, and unrestricted endpoint quantum coding. The coherent detector may use a phase reference and general non-Gaussian control. The structured construction bounds its outcome count; physical gate efficiency, apparatus energy, and control-error tolerance are not established. The energy budget prices the signal, not the measurement apparatus. No feedback to the sender or postselection is supplied.
+The base model assumes vacuum ancillary inputs, memoryless splitting, unlimited reliable helper-to-receiver classical communication, and unrestricted endpoint quantum coding. The resource corollary separately prices the transmitted classical record and bounds sufficient control accuracy. The coherent detector may use a phase reference and general non-Gaussian control; physical synthesis, reference preparation, and reset costs remain open. The energy budget prices the signal, not the measurement apparatus. No feedback to the sender or postselection is supplied.
 
 ## Purpose and contact
 

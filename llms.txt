@@ -21,6 +21,7 @@ Preserve these distinctions:
   coherent preprocessing changes the detector class.
 - Individual-mode helper measurements do not restrict endpoint block coding.
 - The local POVM can use one selected quadratic-phase Fourier setting with O(d) coded outcomes at cutoff dimension d. Physical gate efficiency and reference/control costs remain unproved. science/qubit_optical_bridge.md certifies counting suboptimality under a two-photon cutoff, not an upper bound on full-Fock counting.
+- science/detector_resources.md gives explicit cutoff and sufficient phase/Fourier accuracy, the matched log(L) leading classical-record cost, and a mean-excitation account for the specified Fourier stage. The record converse prices the actual finite/countable message, including every announced setting; it is a weak converse and does not solve the full finite-energy rate tradeoff.
 - The collective optical capacity is inherited, not a second novelty claim.
 - The half-log law is uniform for fixed 0<a<1, E>=1 and 0<=b<=min(a,1-a)/2.
 - All capacities vanish at a<=b. With c=0 they reduce to ordinary pure loss.

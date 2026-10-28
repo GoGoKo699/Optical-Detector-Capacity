@@ -26,6 +26,8 @@ Two other nearby projects have different operational tasks. [Bosonic-Phase-Memor
 
 [Tight uniform continuity bounds for quantum entropies: conditional entropy, relative entropy distance and energy constraints](https://arxiv.org/abs/1507.07775v6), Communications in Mathematical Physics **347**, 291–313. Lemma 2 supplies continuity of conditional entropy with dependence on the finite reference dimension, not the conditioning-system dimension. It justifies the finite-record limit and the transmission converse. Thermal-tail convergence in the constructive argument is additionally derived from entropy-of-mixture bounds. The primary v6 lemma and proof were inspected.
 
+The [resource account](../science/detector_resources.md) also applies Lemma 2 directly to the actually implemented receiver-plus-record channel, including unobserved apparatus information. Its message-rate converse combines the standard conditional mutual-information bound by classical message entropy with degradability and antidegradability. The unassisted pure-loss benchmark is inherited from Wilde and Qi, Eq. (1), Section X.A and Eqs. (331)–(332). The matched leading record cost and explicit finite-cutoff consequences are applications of those established ingredients, not new general entropy or pure-loss-capacity theorems. The Fourier-stage excitation account concerns the specified implementation and does not assert a universal apparatus-energy bound.
+
 ## Closest optical measurement comparisons
 
 ### Memarzadeh, Cafaro, and Mancini (2011)
