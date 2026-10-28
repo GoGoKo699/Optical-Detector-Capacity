@@ -1,0 +1,58 @@
+{
+  "counting": {
+    "diagonal_cases": 20,
+    "rare_pulse_mean": 2.0,
+    "rare_pulse_second_moment": 800.0
+  },
+  "binomial": {
+    "binomial_cases": 90
+  },
+  "coherent_measurements": [
+    {
+      "cutoff_dimension": 3,
+      "receiver": 0.25,
+      "inaccessible": 0.0,
+      "outcomes": 64,
+      "mean_coherent_information": 0.5826944421,
+      "purity_lower_bound": -0.111937615
+    },
+    {
+      "cutoff_dimension": 4,
+      "receiver": 0.25,
+      "inaccessible": 0.1,
+      "outcomes": 256,
+      "mean_coherent_information": 0.3541422496,
+      "purity_lower_bound": -0.433602139
+    },
+    {
+      "cutoff_dimension": 4,
+      "receiver": 0.7,
+      "inaccessible": 0.1,
+      "outcomes": 256,
+      "mean_coherent_information": 1.0593352812,
+      "purity_lower_bound": 0.2033521918
+    }
+  ],
+  "negative_binomial": {
+    "negative_binomial_cases": 20
+  },
+  "scalar_bounds": {
+    "scalar_parameter_cases": 175
+  },
+  "finite_energy_certificate": {
+    "receiver_fraction": "1/4",
+    "inaccessible_fraction": "1/10000",
+    "mean_photons": 1000000,
+    "coherent_lower_interval": [
+      10.51,
+      10.52
+    ],
+    "counting_capacity_less_than": 7.9,
+    "collective_capacity_interval": [
+      11.28,
+      11.29
+    ],
+    "certified_separation_greater_than": 2.61,
+    "method": "48-term rational atanh logarithms; pi < 22/7; no float comparison premise"
+  }
+}

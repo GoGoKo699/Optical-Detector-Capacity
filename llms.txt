@@ -1,0 +1,29 @@
+# Optical Detector Capacity
+
+Study quantum transmission through a vacuum splitter with received fraction a,
+inaccessible fraction b, collected fraction c=1-a-b, and mean signal photons E.
+The helper sends only a classical record to the receiver.
+
+Read science/model.md for the access contract and exact claims, then science/README.md
+for proof dependencies. science/capacity_reduction.md covers arbitrary encoders,
+joint degradation, the inherited collective capacity, and the exact counting
+variational reduction. science/counting_bounds.md proves the energy and loss
+converses plus thermal lower bound. science/coherent_measurements.md supplies a
+finite fourth-root-phase POVM, its purity identity, and the log2(e) additive gap.
+science/uniform_laws.md fixes the uniform domain and rational finite comparison.
+science/interpretation.md explains resources and scope. references/RELATED_WORK.md
+and references/references.bib identify inherited ingredients and comparison limits.
+verification/README.md describes verification/verify.py and expected.json.
+
+Preserve these distinctions:
+- Energy is a mean signal constraint, not a peak or a second-moment constraint.
+- Counting means number-diagonal measurement before classical postprocessing;
+  coherent preprocessing changes the detector class.
+- Individual-mode helper measurements do not restrict endpoint block coding.
+- The local POVM construction is finite at each cutoff but is not gate-efficient.
+- The collective optical capacity is inherited, not a second novelty claim.
+- The half-log law is uniform for fixed 0<a<1, E>=1 and 0<=b<=min(a,1-a)/2.
+- All capacities vanish at a<=b. With c=0 they reduce to ordinary pure loss.
+- No exact finite-energy counting optimum or exact individual-mode capacity is given.
+- Finite checks support their tested ingredients; written proofs and cited coding
+  theorems establish arbitrary-input and asymptotic statements.
