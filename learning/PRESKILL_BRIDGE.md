@@ -204,7 +204,7 @@ R_1(E)=-\log_2\!\left[
 \frac1{1+2aE}+\frac1{1+2(1-b)E}\right]-g(bE).
 ```
 
-A separate finite detector is used on each collected mode. The exponentially large outcome family and the phase reference are supplied resources, not an efficient laboratory design.
+A separate finite detector is used on each collected mode. The independent-phase family above explains the moment calculation. The [structured construction](../science/coherent_measurements.md) reproduces those moments with a quadratic-phase design and selects one setting with linearly many coded outcomes. A phase reference and coherent Fock-space Fourier control remain supplied resources; physical implementation cost is not established.
 
 <a id="limits"></a>
 ## Keep the three limits separate

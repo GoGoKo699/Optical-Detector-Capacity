@@ -22,6 +22,8 @@ At every finite energy, not just in this limit,
 
 Thus joint processing across collected modes improves on the best individual-mode detector by at most about $`1.443`$ qubits per mode. Counting instead loses an unbounded amount as $`L`$ grows. The distinction is between coherence across photon numbers **within a mode** and processing **across modes**. Counting itself is non-Gaussian; this is not a general Gaussian-versus-non-Gaussian comparison.
 
+The [structured detector construction](science/coherent_measurements.md) retains this rate guarantee using one preselected quadratic phase followed by a finite Fock-space Fourier measurement. At cutoff dimension $`d\ge2`$, fewer than $`2d`$ outcomes have nonzero probability on the coded support. The [qubit-to-optical bridge](science/qubit_optical_bridge.md) also shows that a three-outcome detector already beats optimized counting when inputs are restricted to at most two photons.
+
 ## Finite-energy separation
 
 At $`a=1/4`$, $`b=1/10000`$, and $`E=10^6`$:
@@ -44,6 +46,7 @@ Start with the [physical model and claims](science/model.md), then follow the [c
 | Why do arbitrary codes obey the entropy bounds? | [Operational reduction](science/capacity_reduction.md) |
 | Why does counting have the half-logarithmic law? | [Counting bounds and construction](science/counting_bounds.md) |
 | How can one collected mode retain the full leading rate? | [Finite coherent POVM](science/coherent_measurements.md) |
+| Where does the qubit counting optimum first fail? | [Two-photon separation](science/qubit_optical_bridge.md) |
 | What is uniform as energy and inaccessible loss vary? | [Uniform laws](science/uniform_laws.md) |
 | What changes physically, and what remains outside the result? | [Interpretation](science/interpretation.md) |
 | Which ingredients and comparisons are inherited? | [Related work](references/RELATED_WORK.md) |
@@ -65,14 +68,15 @@ The [Preskill bridge](learning/PRESKILL_BRIDGE.md) translates notation, works th
 python -m pip install -r verification/requirements.txt
 python verification/verify.py
 python verification/check_learning.py
-python -m unittest discover -s verification -p "test_learning.py" -v
+python -m unittest discover -s verification -p "test_*.py" -v
+python verification/qutrit_certificate.py
 ```
 
 The runner checks finite channel identities, complete finite POVMs, entropy inequalities, and the rational rate certificate. The [learning checks](learning/README.md#reproduce-the-learning-checks) validate the milestone structure, links, and worked examples. Written proofs establish the arbitrary-input and asymptotic statements. [Verification scope](verification/README.md) distinguishes these roles. The [review record](verification/FURNISHING_CHECK.md) states performed checks and remaining display-verification limits.
 
 ## Scope
 
-The model assumes vacuum ancillary inputs, memoryless splitting, unlimited reliable helper-to-receiver classical communication, and unrestricted endpoint quantum coding. The coherent detector may use a phase reference and general non-Gaussian control. Its finite construction is not gate-efficient. The energy budget prices the signal, not the measurement apparatus. No feedback to the sender or postselection is supplied.
+The model assumes vacuum ancillary inputs, memoryless splitting, unlimited reliable helper-to-receiver classical communication, and unrestricted endpoint quantum coding. The coherent detector may use a phase reference and general non-Gaussian control. The structured construction bounds its outcome count; physical gate efficiency, apparatus energy, and control-error tolerance are not established. The energy budget prices the signal, not the measurement apparatus. No feedback to the sender or postselection is supplied.
 
 ## Purpose and contact
 

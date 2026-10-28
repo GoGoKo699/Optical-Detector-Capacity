@@ -20,7 +20,7 @@ Preserve these distinctions:
 - Counting means number-diagonal measurement before classical postprocessing;
   coherent preprocessing changes the detector class.
 - Individual-mode helper measurements do not restrict endpoint block coding.
-- The local POVM construction is finite at each cutoff but is not gate-efficient.
+- The local POVM can use one selected quadratic-phase Fourier setting with O(d) coded outcomes at cutoff dimension d. Physical gate efficiency and reference/control costs remain unproved. science/qubit_optical_bridge.md certifies counting suboptimality under a two-photon cutoff, not an upper bound on full-Fock counting.
 - The collective optical capacity is inherited, not a second novelty claim.
 - The half-log law is uniform for fixed 0<a<1, E>=1 and 0<=b<=min(a,1-a)/2.
 - All capacities vanish at a<=b. With c=0 they reduce to ordinary pure loss.
