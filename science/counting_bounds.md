@@ -4,6 +4,24 @@
 
 Assume $`a>b\ge0`$ and $`c=1-a-b`$. The exact counting optimization is over all distributions $`p_n`$ with $`\mathbb EN\le E`$. Write $`h_n(t)=H(\mathrm{Bin}(n,t))`$.
 
+## Every number-diagonal record is simulated by counting
+
+Let a helper block POVM be diagonal in the product occupation basis:
+
+```math
+G_y=\sum_{\mathbf k}p(y|\mathbf k)
+|\mathbf k\rangle\langle\mathbf k|,
+\qquad p(y|\mathbf k)\ge0,\quad\sum_y p(y|\mathbf k)=1.
+```
+
+For every joint state of receiver, helper, and reference, the unnormalized conditional receiver-reference state is the sum of the exact-count conditional states weighted by $`p(y|\mathbf k)`$. Thus full counting followed by this classical stochastic map simulates the entire receiver channel, including its reference correlations. This conclusion does not assume diagonal inputs or a particular encoder.
+
+For standard-Borel outcome spaces, replace $`p(y|\mathbf k)`$ by a classical Markov kernel $`p(dy|\mathbf k)`$; the same operator-valued integral gives the simulation.
+
+Every decoder for the coarser record can consequently be used after full counting. Arbitrarily correlated diagonal block effects obey the same comparison. So do measurements made once per collected mode, with each diagonal POVM chosen classically from earlier outcomes: their complete transcript is a stochastic function of the exact occupation vector. They cannot exceed $`Q_{\rm cnt}`$. This is a data-processing consequence of the detector definition, rather than an additional capacity formula. Coherent processing or remeasurement must be assessed through the resulting effective block POVM.
+
+To improve on counting, at least one effective POVM effect must have an off-diagonal matrix element in that occupation basis. Off-diagonal effects are necessary, but not sufficient. A coherent interferometer before counting changes those effects; a measurement commuting only with total photon number need not be diagonal in the full occupation basis. Neither case is covered by this diagonal-record ceiling. The [two-photon example](qubit_optical_bridge.md) makes the single-mode distinction explicit.
+
 ## Energy-only upper bound
 
 When $`c>0`$, use the residual $`J-aK/c`$. Its conditional mean given $`N=n`$ is zero, and multinomial second moments give
