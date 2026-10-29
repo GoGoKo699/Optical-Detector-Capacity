@@ -28,6 +28,15 @@ The rate is $`\liminf n^{-1}\log_2d_n`$ with unconditional entanglement fidelity
 
 There is no initial shared entanglement, coherent helper link, sender feedback, or additional sender–receiver classical channel. The helper sends an unlimited reliable classical record to the receiver only. Endpoint quantum memory and coding complexity are unrestricted. Device preparation, a phase reference, and detector-control energy are not charged to $`E`$.
 
+The [reference-resource extensions](reference_mean_bounds.md) separately charge
+initial mean reference photons $`M`$, keeping the signal constraint $`E`$.
+Their operation contract requires helper effects to commute with every local
+signal-plus-reference number, and reference initialization independent of the
+encoded signal. Mean stock, support width, gate accuracy, preparation work, and
+reset are distinct resources. The mean-stock and width profiles use unrestricted
+classical records; the [record-budget result](detector_resources.md) is a
+separate optimization.
+
 ## Three detector classes
 
 **Counting, $`Q_{\rm cnt}`$.** Each collected mode is measured in its number basis. The receiver can retain and process the complete vector of counts. Any stochastic processing, coarse graining, or diagonal POVM on the product number basis is dominated by this exact record. A coherent optical transformation before counting changes the detector class and is not included in this benchmark.

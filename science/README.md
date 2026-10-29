@@ -21,6 +21,7 @@ The [model](model.md) owns all resources and the meanings of $`Q_{\rm cnt},Q_1,Q
 | Constant gap and uniform exponents | The preceding finite inequalities and elementary bounds on thermal entropy |
 | Linear reference stock for communication | Conditional shifted-sine entropy, actual complementary output, receiver entropy concavity, and finite-cutoff coding |
 | Local-reference fluctuation ceiling | Refinement by each local conserved number, logical-reference entropy, multinomial residual variance, and mean-energy averaging |
+| Mean reference-energy profile | The same conserved-number refinement, first absolute residual moment, conditional dither/Laplace entropy bound, and the direct sine construction |
 
 Primary coding and assistance theorems retain their [attribution](../references/RELATED_WORK.md). Finite matrix calculations do not prove channel coding. The construction's finite support is used for achievability only; the converse never restricts competing inputs to that support.
 
@@ -34,5 +35,8 @@ The [direct apparatus argument](direct_reference.md) pays discarded-reference
 entropy directly and uses a reference of linear mean energy at fixed rate gap.
 The [local-reference converse](reference_width_bounds.md) applies to arbitrary
 codes and coherent inputs under the stated per-mode conservation contract. It
-matches the required support-width order in the energy-driven regime without
-turning a variance bound into a mean-energy lower bound.
+matches the required support-width order in the energy-driven regime. The
+[mean-stock converse](reference_mean_bounds.md) separately uses a first absolute
+moment, including infinite-variance references, and matches the linear initial
+mean-energy order. Together the upper bound and direct construction give the
+complete mean-stock capacity profile to an additive constant in that regime.

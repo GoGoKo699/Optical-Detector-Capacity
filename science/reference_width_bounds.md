@@ -8,7 +8,9 @@ arbitrary coherent inputs, correlated endpoint codes, and discarded encoder
 ancillas. It requires neither input phase twirling, reference purity, nor a
 degradability assertion about the actual detector. In the energy-driven regime,
 it supplies a support-width converse to the direct finite-reference construction.
-It does not give a universal lower bound on reference mean energy.
+Its variance argument alone cannot lower-bound reference mean energy. The
+[separate first-moment proof](reference_mean_bounds.md) gives the matching
+mean-stock converse under this same operation contract.
 
 ## The operation constraint is separate local invariance
 
@@ -201,8 +203,10 @@ prove uniform width necessity $`\Omega(L)`$ when $`E\gg L`$, because the
 signal term may dominate. It also does not convert spread into a universal mean
 reference-energy bound: a number distribution assigning probability $`1/m`$ to
 level $`m`$ and the remainder to zero has mean one and variance $`m-1`$.
-Rare distant levels obstruct that inference. This example does not assert that
-the sparse state achieves the communication rate.
+Rare distant levels obstruct that inference. The
+[first-moment converse](reference_mean_bounds.md) handles these states directly
+and proves linear mean-stock necessity in the energy-driven regime without
+inferring a mean bound from variance.
 
 ## The complete width profile to an additive constant
 
@@ -281,8 +285,9 @@ Widths up to order $`\sqrt E`$ retain counting's leading coefficient. The
 coefficient increases between widths $`\sqrt E`$ and $`E`$, and reaches one
 at linear width. A bounded additive gap requires the stronger width condition
 already proved above; leading coefficient one by itself does not imply such a
-gap. This profile does not optimize a simultaneous finite classical-record
-budget or a mean-reference-energy constraint.
+gap. The corresponding [mean-energy profile](reference_mean_bounds.md) is proved
+separately. Neither profile optimizes a simultaneous finite classical-record
+and reference budget.
 
 ## Verification
 

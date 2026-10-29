@@ -55,7 +55,7 @@ The energy constraint on a block is
 \mathrm{Tr}\!\left(\rho_{A^n}\sum_{i=1}^{n}\hat n_i\right)\le nE.
 ```
 
-It prices the average coded signal, not its largest photon number. For example, a number distribution with probability $`2/m`$ at $`m\ge2`$ and the remaining probability at zero has mean two but second moment $`2m`$. It is allowed at budget two no matter how large $`m`$ becomes. This is why a converse cannot silently assume bounded variance. Detector energy, a phase reference, and endpoint circuit complexity are separate, unoptimized resources in this model.
+It prices the average coded signal, not its largest photon number. For example, a number distribution with probability $`2/m`$ at $`m\ge2`$ and the remaining probability at zero has mean two but second moment $`2m`$. It is allowed at budget two no matter how large $`m`$ becomes. This is why a converse cannot silently assume bounded variance. Reference photons are priced separately in the [local-conservation extension](../science/reference_mean_bounds.md); preparation work, reset, and endpoint circuit complexity remain outside that account.
 
 <a id="flags"></a>
 ## The helper record belongs in the channel and its complement
@@ -225,3 +225,11 @@ The counting converse and construction give $`Q_{\rm cnt}=\frac12\log_2L+O_a(1)`
 Thus photon-number coherence within an individual collected mode is enough for the full leading rate, while unrestricted processing of count records is not. All comparisons retain arbitrary endpoint quantum coding. Photon counting is itself non-Gaussian, so this is not a Gaussian-versus-non-Gaussian theorem.
 
 The [finite certificate](../verification/README.md) demonstrates a strict numerical separation of the proved bounds. It does not establish their proofs by sampling, optimize the finite detector, or certify experimental performance. The final [interpretation](../science/interpretation.md) and [attribution](../references/RELATED_WORK.md) separate the operational contribution from its inherited benchmark and unpriced implementation resources.
+
+The [mean-reference profile](../science/reference_mean_bounds.md) adds a resource
+lesson: under separate local number conservation, linear initial reference mean
+is sufficient and necessary for a bounded rate gap in the energy-driven regime.
+Its converse uses the first absolute moment of the optical residual and a
+conditional dither/Laplace entropy bound. Large reference variance at fixed mean
+does not evade it. The same physical distinction between global and separate
+local conservation must be kept when applying this extension.

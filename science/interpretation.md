@@ -37,11 +37,13 @@ preparation work, reset, and repeated-use behavior require additional analysis.
 The [direct entropy calculation](direct_reference.md) retains the rate guarantee
 with fresh reference mean $`O(L+1)`$ by paying information left in the reference.
 Under a stronger per-mode conservation contract, the
-[variance converse](reference_width_bounds.md) limits all codes, including
-coherent inputs and mixed encoders. Its required support width is linear in
-signal energy when $`E=L`$. Global conservation alone, coherent reuse of one
-reference across modes, and a general mean-reference-energy optimum are not
-covered by that converse.
+[reference converses](reference_width_bounds.md) limit all codes, including
+coherent inputs and mixed encoders. The separate
+[first-moment proof](reference_mean_bounds.md) also prices mean reference energy
+without a variance assumption. In the energy-driven regime, linear initial mean
+stock is sufficient and necessary for a bounded additive rate gap; the complete
+mean-budget profile is determined to an additive constant. Global conservation
+alone and coherent reuse of one reference across modes have different contracts.
 
 Photon counting is itself a non-Gaussian measurement. The separation is therefore not a no-go theorem for Gaussian measurements or a generic claim that non-Gaussian operations suffice. The constructed coherent POVM is one successful family; optimal Gaussian-helper capacity is not established here.
 
