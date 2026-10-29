@@ -141,7 +141,7 @@ when individual uses have different signal and reference budgets.
 
 ## The complete mean-energy profile
 
-Fix $`0<a<1`$ and restrict to the energy-driven uniform domain
+Fix $`0\lt a\lt 1`$ and restrict to the energy-driven uniform domain
 
 ```math
 E\ge1,\qquad
@@ -180,7 +180,7 @@ The initial sine reference has exact mean
 \langle N_W\rangle=h+\frac{K-1}{2}<4d\le12x\le M.
 ```
 
-The truncated thermal signal has strict mean slack $`x_d<x\le E`$, tail
+The truncated thermal signal has strict mean slack $`x_d\lt x\le E`$, tail
 less than $`1/2`$, and $`bx\le1`$. The
 [finite-cutoff bound](detector_resources.md#the-finite-record-tradeoff-to-an-additive-constant)
 is at least $`\log_2x+\log_2a-4`$. Moreover,

@@ -2,7 +2,7 @@
 
 [Learning entrance](README.md) · [Thirty milestones](MILESTONES.md) · [Exact model](../science/model.md) · [Proof route](../science/README.md)
 
-The project compares three ways of reading collected light while keeping the same signal channel and endpoint coding resources. This bridge introduces the extra optical ingredients needed to carry entropy and channel-coding ideas into that comparison. The exact proofs remain in `science/`.
+The project compares three ways of reading collected light while keeping the same signal channel and endpoint coding resources. It then charges the finite phase reference used by a coherent detector. This bridge connects the optical mechanisms and apparatus constraints to entropy and channel coding. The exact proofs remain in `science/`.
 
 <a id="sources"></a>
 ## Source and focused reading map
@@ -20,7 +20,7 @@ The project compares three ways of reading collected light while keeping the sam
 | 10.9; 10.9.4 | 68–76 | Optional second-moment and coding perspective |
 | 10.10 | 78–79 | Background synthesis after working through the project |
 
-The optical Fock-space model, counting converses, phase POVM, constant-gap comparison, and uniform crossover are additional arguments, not results attributed to the chapter. The precise infinite-dimensional coding ingredient is the Wilde–Qi theorem identified in [Related work](../references/RELATED_WORK.md).
+The optical counting converses, phase POVM, constant-gap comparison, and reference-resource profiles are additional arguments. They are not results attributed to the chapter. The precise infinite-dimensional coding ingredient is the Wilde–Qi theorem; the phase designs and conserving reference constructions also retain their primary attributions in [Related work](../references/RELATED_WORK.md). Preskill remains the single educational anchor.
 
 <a id="notation"></a>
 ## Translate notation before using a capacity formula
@@ -31,7 +31,7 @@ The chapter's environmental register $`E`$ becomes $`Z`$ for the inaccessible op
 
 Most importantly, Preskill's $`Q_1(\mathcal N)`$ in §10.7.1 is an optimized one-use coherent-information quantity for a fixed channel. Here $`Q_1(E)`$ means an **asymptotic capacity with individual-mode helper measurements**. Its sender and receiver may use arbitrary block codes. These are different definitions despite the shared subscript. The project does not claim an exact one-use formula for its optimized $`Q_1(E)`$.
 
-The cutoff dimension below is $`d=M+1`$; the transmitted logical dimension over $`n`$ channel uses is $`d_n`$. Neither equals the number of helper outcomes in general.
+Use $`d`$ for the photon cutoff dimension, with occupied levels $`0,\ldots,d-1`$, and $`d_n`$ for the transmitted logical dimension over $`n`$ uses. Neither generally equals the number of helper outcomes. Below, $`M`$ denotes mean reference photons and $`K_{\rm ref}`$ denotes reference support width. The apparatus reference $`W`$ is different from the logical reference $`R`$ whose entanglement tests transmission.
 
 <a id="optics"></a>
 ## From one oscillator to the resource model
@@ -77,7 +77,7 @@ I_c(\rho,\mathcal N_M)&=\sum_xp_x
 \end{aligned}
 ```
 
-The record entropy cancels because both outputs contain the same classical label. It is not permission to omit the record from the complement. A coarse measurement can leave an unresolved helper system there as well. For continuous records, the proof uses conditional states and finite partitions rather than subtracting divergent differential entropies.
+The record entropy cancels because both outputs contain the same classical label. It is not permission to omit the record from the complement. A coarse measurement can leave an unresolved helper system there as well; a finite apparatus can leave a discarded phase reference. For continuous records, the proof uses conditional states and finite partitions rather than subtracting divergent differential entropies.
 
 This applies Preskill's §10.7.1 channel language to the actual measured apparatus. The [operational reduction](../science/capacity_reduction.md) handles arbitrary encoders, unresolved outputs, and the energy constraint.
 
@@ -172,10 +172,10 @@ A_0=|0\rangle\langle0|+\sqrt a|1\rangle\langle1|,
 
 Measuring the helper in the plus/minus basis instead gives $`A_\pm=(A_0\pm A_1)/\sqrt2`$. Each conditional map contains cross terms between $`A_0`$ and $`A_1`$ that classical processing of number outcomes cannot create. Both measurements are complete. This explains the mechanism, not a capacity advantage for the qubit-restricted model.
 
-The actual construction occupies photon numbers $`0,\ldots,M`$, with $`d=M+1`$. It uses all fourth-root phase vectors:
+To see the purity calculation, first occupy photon numbers $`0,\ldots,d-1`$ and use all fourth-root phase vectors:
 
 ```math
-|v_{\boldsymbol\omega}\rangle=\sum_{k=0}^{M}\omega_k|k\rangle,
+|v_{\boldsymbol\omega}\rangle=\sum_{k=0}^{d-1}\omega_k|k\rangle,
 \qquad
 E_{\boldsymbol\omega}=4^{-d}|v_{\boldsymbol\omega}\rangle
 \langle v_{\boldsymbol\omega}|,
@@ -204,14 +204,94 @@ R_1(E)=-\log_2\!\left[
 \frac1{1+2aE}+\frac1{1+2(1-b)E}\right]-g(bE).
 ```
 
-A separate finite detector is used on each collected mode. The independent-phase family above explains the moment calculation. The [structured construction](../science/coherent_measurements.md) reproduces those moments with a quadratic-phase design and selects one setting with linearly many coded outcomes. A phase reference and coherent Fock-space Fourier control remain supplied resources; physical implementation cost is not established.
+A separate finite detector is used on each collected mode. The independent-phase family explains the moment calculation. For an odd prime $`q\ge d`$, the established phases $`\omega_k(r,s)=e^{2\pi i(rk+sk^2)/q}`$ reproduce the same pairings. Each fixed $`s`$ already defines a complete Fourier POVM; selecting a setting with small average receiver purity retains the rate bound with $`q<2d`$ occupied outcomes. The choice depends on the specified channel and average input, never on the unknown message. See [Coherent measurements](../science/coherent_measurements.md) for the exact construction and its attribution.
 
 <a id="limits"></a>
 ## Keep the three limits separate
 
 First fix a photon cutoff and a finite detector. Then use sufficiently long endpoint codes at that fixed channel to approach an achievable rate. Only afterward increase the cutoff. Truncating a thermal input gives strict signal-energy slack, and its explicit geometric tail controls the output entropy correction. Trace-norm convergence alone would not justify entropy convergence on an unbounded oscillator.
 
-The large-energy/near-complete-collection comparison is another limit. Fix $`0<a<1`$, take $`E\ge1`$ and $`0\le b\le\frac12\min\{a,1-a\}`$, and put $`L=\min\{E,1/b\}`$ with $`1/0=\infty`$. Only along paths with $`L\to\infty`$ does the ratio of the two leading laws tend to two. At fixed $`b>0`$, increasing $`E`$ eventually reaches a loss-limited scale; that is not the same ratio limit. With no collected output, all detector classes coincide with ordinary pure loss, outside the stated half-logarithmic domain.
+The large-energy/near-complete-collection comparison is another limit. Fix $`0\lt a\lt 1`$, take $`E\ge1`$ and $`0\le b\le\frac12\min\{a,1-a\}`$, and put $`L=\min\{E,1/b\}`$ with $`1/0=\infty`$. Only along paths with $`L\to\infty`$ does the ratio of the two leading laws tend to two. At fixed $`b>0`$, increasing $`E`$ eventually reaches a loss-limited scale; that is not the same ratio limit. With no collected output, all detector classes coincide with ordinary pure loss, outside the stated half-logarithmic domain.
+
+<a id="record-resources"></a>
+## Finite cutoff, transmitted record, and detector accuracy
+
+For a thermal input of mean $`x`$ restricted to $`d`$ levels, the omitted mass is $`t=[x/(1+x)]^d`$. The positive mixture of the retained state and the tail gives a one-sided rate penalty at most $`-2\log_2(1-t)`$. Fixed tail tolerance therefore needs $`O(x+1)`$ levels. This estimate supplies an explicit construction while leaving the converse's mean-energy input class unrestricted.
+
+The selected detector has $`q<2d`$ occupied outcomes, plus an outside flag. A finite record must include every announced setting and retained outcome. The [record account](../science/detector_resources.md) matches the leading $`\log_2L+O(1)`$ record cost for a bounded rate gap and gives the separate record-capacity tradeoff. An alphabet size is not a physical gate count.
+
+When a detector is imperfect, compare its actual receiver state with a purification of the chosen input retained:
+
+```math
+I_c(\rho,\Phi)=-S(R|BX).
+```
+
+A finite dimension for $`R`$ permits a conditional-entropy continuity bound. The formula includes any unresolved apparatus through the actual channel; replacing its full complement by the original optical output $`Z`$ could give the wrong rate. The coding statement uses the implemented memoryless channel, rather than promising that an ideal decoder works unchanged.
+
+<a id="phase-reference"></a>
+## Supply a finite phase reference and retain its discarded information
+
+A coherent detector mixes number levels. The [finite-reference construction](../science/finite_reference.md) implements a prescribed $`q`$-level unitary with a sine-shaped reference state on $`K_{\rm ref}`$ consecutive photon levels, starting at $`h=q-1`$. Its initial mean photons are $`h+(K_{\rm ref}-1)/2`$. Within each occupied total-number sector, the joint unitary acts as
+
+```math
+|k\rangle_D|n\rangle_W\longmapsto
+\sum_{j=0}^{q-1}U_{jk}|j\rangle_D|n+k-j\rangle_W.
+```
+
+The reference supplies or absorbs the change in detector photon number. Boundary margins keep every shift on a nonnegative ladder. The construction is number conserving, but the reference can change and become correlated. Fresh independent references give a memoryless detector. Initial stock, net energy transfer, and the cost of preparing or resetting that stock are different quantities.
+
+Approximating the full prescribed gate uniformly is one resource question. For communication, the [direct argument](../science/direct_reference.md) instead bounds the information left in the discarded reference. The actual complementary output includes $`ZW`$ and a copy of the count $`Y`$, so
+
+```math
+I_c=S(B|Y)-S(ZW|Y).
+```
+
+Each conditional reference is a mixture of translated sine states in an interval of length $`K_{\rm ref}+d-1`$. A discrete-Laplacian energy estimate and the maximum-entropy principle give
+
+```math
+S(W|Y)\le g\!\left[\frac{\pi^2}{12}(2r+r^2)\right],
+\qquad r=\frac{d-1}{K_{\rm ref}+1}.
+```
+
+The Laplacian mode number is an auxiliary mathematical observable, not the reference's physical photon energy. Choosing $`K_{\rm ref}`$ proportional to $`d`$ makes this entropy penalty a constant. Meanwhile, the actual conditional receiver is a mixture of number rotations of the ideal conditional state, so its entropy cannot decrease. Subadditivity pays the complete $`ZW`$ complement and retains the ideal rate up to that constant. With $`d=O(L+1)`$, fresh initial reference photons $`O(L+1)`$ suffice.
+
+<a id="local-reference"></a>
+## A converse for reference stock, and the resulting capacity profile
+
+To ask whether that stock is necessary, specify the allowed operations. The local-reference model starts the apparatus independently of the encoded signal and requires every effective helper effect $`E_y`$ to satisfy
+
+```math
+[E_y,N_{D_i}+N_{W_i}]=0\quad\text{for every mode }i.
+```
+
+Preserving only the sum across all modes is a weaker restriction and permits additional operations. Under separate local invariance, revealing each conserved total can only help the receiver. The all-code converse then bounds logical coherent information by conditional number entropies $`H(J_i|T_i)`$, with $`T_i=N_{D_i}+N_{W_i}`$. It does not twirl an arbitrary competing input or assume that the implemented detector is degradable.
+
+The [width proof](../science/reference_width_bounds.md) uses a residual second moment to bound reference variance and support width. Mean stock requires a different estimate: large variance is possible at mean one. The [mean-energy proof](../science/reference_mean_bounds.md) uses the first absolute residual moment and unit-interval dithering, followed by the Laplace maximum-entropy bound. With average initial reference mean $`M`$, it gives
+
+```math
+Q_{\rm loc}^{\rm mean}(E,M)\le
+\min\!\left\{Q_{\rm coll}(E),
+\log_2\!\left[2e\left(
+\sqrt{\frac{a(a+c)}cE}+\frac acM+\frac14\right)\right]\right\}.
+```
+
+The estimate permits infinite reference variance. Combining it with counting and the direct sine-reference construction yields
+
+```math
+Q_{\rm loc}^{\rm mean}(E,M)
+=\min\!\left\{\log_2E,
+\max\!\left\{\tfrac12\log_2E,\log_2(M+1)\right\}\right\}+O_a(1).
+```
+
+This profile has unrestricted classical records and holds for fixed $`0\lt a\lt 1`$, $`E\ge1`$, $`M\ge0`$, $`0\le b\le\frac12\min\{a,1-a\}`$, and $`bE\le1`$. If $`M+1`$ scales as $`E^\alpha`$, the leading coefficient is:
+
+| Reference exponent | Rate coefficient multiplying $`\log_2E`$ |
+|---|---:|
+| $`0\le\alpha\le1/2`$ | $`1/2`$ |
+| $`1/2<\alpha<1`$ | $`\alpha`$ |
+| $`\alpha\ge1`$ | $`1`$ |
+
+Linear mean stock suffices for a bounded additive rate gap, and such a gap requires $`M=\Omega(E)`$ within this model. Leading coefficient one is weaker: $`M=E/\log E`$ still leaves a growing logarithmic-of-logarithmic gap. The mean profile and the separate classical-record profile do not jointly optimize both resource budgets.
 
 <a id="synthesis"></a>
 ## Assemble the result and its boundaries
@@ -224,12 +304,6 @@ The counting converse and construction give $`Q_{\rm cnt}=\frac12\log_2L+O_a(1)`
 
 Thus photon-number coherence within an individual collected mode is enough for the full leading rate, while unrestricted processing of count records is not. All comparisons retain arbitrary endpoint quantum coding. Photon counting is itself non-Gaussian, so this is not a Gaussian-versus-non-Gaussian theorem.
 
-The [finite certificate](../verification/README.md) demonstrates a strict numerical separation of the proved bounds. It does not establish their proofs by sampling, optimize the finite detector, or certify experimental performance. The final [interpretation](../science/interpretation.md) and [attribution](../references/RELATED_WORK.md) separate the operational contribution from its inherited benchmark and unpriced implementation resources.
+The [finite certificates](../verification/README.md) evaluate proved inequalities. The unrestricted optical example uses a mean budget; the [two-photon example](../science/qubit_optical_bridge.md) imposes an additional per-mode cutoff. Neither is an experimental implementation or a numerical substitute for an all-input proof.
 
-The [mean-reference profile](../science/reference_mean_bounds.md) adds a resource
-lesson: under separate local number conservation, linear initial reference mean
-is sufficient and necessary for a bounded rate gap in the energy-driven regime.
-Its converse uses the first absolute moment of the optical residual and a
-conditional dither/Laplace entropy bound. Large reference variance at fixed mean
-does not evade it. The same physical distinction between global and separate
-local conservation must be kept when applying this extension.
+The finite-reference analysis strengthens the physical account: prepared reference photons can be charged, and their mean determines the local-conservation capacity profile to an additive constant. The [interpretation](../science/interpretation.md) and [attribution](../references/RELATED_WORK.md) keep the underlying operation contracts, inherited ingredients, and unoptimized synthesis, preparation, and reset costs explicit.

@@ -58,7 +58,7 @@ Its support and mean photon number are finite:
 One can take a finite reference ladder with levels $`0,\ldots,B_{\max}`$,
 where $`B_{\max}=K+2h-1`$. For every complete total-number sector
 $`h\le T\le B_{\max}`$, apply $`U`$ to the subspace with basis
-$`\{|k,T-k\rangle:0\le k<q\}`$. Act as the identity on its orthogonal
+$`\{|k,T-k\rangle:0\le k\lt q\}`$. Act as the identity on its orthogonal
 complement within that sector and on every other sector. This defines a unitary
 $`V_U`$ on detector and reference and exactly conserves total number. For all
 occupied initial states,
@@ -66,7 +66,7 @@ occupied initial states,
 ```math
 V_U(|k\rangle|n\rangle)
 =\sum_{j=0}^{q-1}U_{jk}|j\rangle|n+k-j\rangle,
-\qquad k<q,\ h\le n\le h+K-1.
+\qquad k\lt q,\ h\le n\le h+K-1.
 ```
 
 The offset $`h`$ keeps every output reference number nonnegative, and the upper

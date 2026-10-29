@@ -9,7 +9,7 @@ bound also gives sufficient implementation accuracy. These statements price
 outcomes and mathematical control error; they do not determine a physical gate
 count or the full energy cost of a phase reference.
 
-Assume $`a>b\ge0`$ and $`0<a<1`$. Write $`x>0`$ for a chosen mean input energy,
+Assume $`a>b\ge0`$ and $`0\lt a\lt 1`$. Write $`x>0`$ for a chosen mean input energy,
 $`d=M+1\ge2`$ for the input cutoff dimension, and $`q`$ for the smallest odd prime
 at least $`d`$. The detector, including the selected quadratic setting, is chosen
 before transmission from the known channel and average coded input.
@@ -21,7 +21,7 @@ Let $`\tau_x`$ be the thermal input of mean $`x`$, and put
 ```math
 z=\frac{x}{1+x},\qquad t=z^d,\qquad
 \tau_{x,d}=\frac{P_d\tau_xP_d}{1-t},\qquad
-x_d=x-\frac{dt}{1-t}<x.
+x_d=x-\frac{dt}{1-t}\lt x.
 ```
 
 Here $`t`$ is discarded probability in constructing the average input; it is not
@@ -68,7 +68,7 @@ Then $`t\le\delta_\gamma`$ and $`\kappa(t)\le\gamma`$. The simpler choice
 $`d=\max\{2,\lceil(x+1)\ln(1/\delta_\gamma)\rceil\}`$ also suffices, since
 $`\ln(1+1/x)\ge1/(x+1)`$. At every such fixed cutoff, code for the finite
 flagged channel before increasing the cutoff. The strict energy slack
-$`x_d<x\le E`$ preserves the original average signal-energy contract.
+$`x_d\lt x\le E`$ preserves the original average signal-energy contract.
 
 ## Use the energy that still improves the rate
 
@@ -181,7 +181,7 @@ The argument is an application of established entropy, degradability, and
 pure-loss capacity results, rather than a new general information inequality.
 It is a weak converse, not a strong-converse error exponent.
 
-For every fixed $`0<a<1`$, $`Q_0(E)`$ is bounded independently of $`E`$:
+For every fixed $`0\lt a\lt 1`$, $`Q_0(E)`$ is bounded independently of $`E`$:
 it vanishes for $`a\le1/2`$ and is at most
 $`\log_2[a/(1-a)]`$ otherwise. Therefore reaching
 $`\log_2L-O_a(1)`$ qubits per mode requires
@@ -193,7 +193,7 @@ remains open; the following bounds characterize it to an additive constant.
 ## The finite record tradeoff to an additive constant
 
 The same construction gives a uniform additive characterization throughout the
-record budget. Assume $`a>b\ge0`$, fixed $`0<a<1`$, $`L=\min\{E,1/b\}\ge1`$
+record budget. Assume $`a>b\ge0`$, fixed $`0\lt a\lt 1`$, $`L=\min\{E,1/b\}\ge1`$
 and $`r_c\ge0`$. Define constants depending only on the received fraction,
 
 ```math
@@ -260,7 +260,7 @@ transcript can be encoded injectively in
 $`\lceil n\log_2(q+1)\rceil`$ bits, which is at most $`nr_c`$ for sufficiently
 large $`n`$. This is lossless encoding of the entire transcript; rounding each
 symbol separately to $`\lceil\log_2(q+1)\rceil`$ bits is unnecessary. It also
-directly meets the Shannon budget since $`H(Y)\le n\log_2(q+1)<nr_c`$.
+directly meets the Shannon budget since $`H(Y)\le n\log_2(q+1)\lt nr_c`$.
 No record distribution assumption or omitted outcome is needed for this bound.
 The outside outcome has zero probability on the code support, but is included
 in the alphabet estimate anyway.
@@ -331,7 +331,7 @@ $`\|\widetilde U-U\|\le\varepsilon`$ on the occupied input subspace gives
 the required trace-distance bound by contraction under measurement and partial
 trace. For example, let $`\varepsilon_F`$ bound the Fourier operator error,
 and let the diagonal phase differ by $`\Delta\theta k+\Delta\chi k^2`$ on
-$`k<d`$, in radians. A sufficient bound is
+$`k\lt d`$, in radians. A sufficient bound is
 
 ```math
 \varepsilon_F+|\Delta\theta|(d-1)

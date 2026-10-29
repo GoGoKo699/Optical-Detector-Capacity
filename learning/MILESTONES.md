@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Learning entrance](README.md) · [Preskill bridge](PRESKILL_BRIDGE.md) · [Scientific route](../science/README.md)
 
-The map has **14 background/preliminaries milestones** and **16 narrative/innovation milestones**. The background joins optical carriers, classical records, entropy, and coding into one resource model. The narrative then develops the counting and coherent-detector arguments separately before joining them into the uniform comparison. The allocation follows that scientific structure, not a particular reader's preparation.
+The map has **14 background/preliminaries milestones** and **16 narrative/innovation milestones**. The background joins optical carriers, classical records, entropy, and coding into one resource model. The narrative develops the detector comparison, then follows the finite apparatus through a matched mean-reference capacity profile. The allocation follows that scientific structure, not a particular reader's preparation.
 
 Every dependency points to an earlier milestone. The targets cover the connected argument, not every technical lemma. Preskill section references use **arXiv:1604.07450v5**, updated June 2025 and posted 8 July 2025. The [source map](PRESKILL_BRIDGE.md#sources) distinguishes chapter foundations from optical and research arguments supplied locally.
 
@@ -100,13 +100,13 @@ Every dependency points to an earlier milestone. The targets cover the connected
 
 **Central question:** Where does the measurement record go in a channel dilation?
 
-**Understanding target:** Identify the receiver flag and its complementary copy after a rank-one measurement, and the additional unresolved system for a coarse measurement.
+**Understanding target:** Identify the receiver flag and its complementary copy after a rank-one measurement, and retain unresolved helper or discarded apparatus systems when the detector changes.
 
 **Dependencies:** [M04](#m04), [M05](#m05).
 
 **Story role:** Prevent an incomplete environmental entropy ledger.
 
-**Conceptual connection:** The inaccessible optical mode alone is not the complement of the measured channel.
+**Conceptual connection:** The inaccessible optical mode alone is not generally the complement; a discarded phase reference can carry additional information.
 
 **Sources:** Preskill §§10.7.1; 10.7.3; [project bridge](PRESKILL_BRIDGE.md#flags); [scientific account](../science/capacity_reduction.md).
 
@@ -317,205 +317,205 @@ Every dependency points to an earlier milestone. The targets cover the connected
 **Sources:** Preskill §§10.1.1–10.1.2; [project bridge](PRESKILL_BRIDGE.md#counting-mechanism); [scientific account](../science/counting_bounds.md).
 
 <a id="m19"></a>
-### M19 — Thinning exposes inaccessible loss
+### M19 — The loss-dependent counting ceiling
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How does the counting entropy difference become a difference of thinning information?
+**Central question:** How does inaccessible loss limit counting at arbitrarily large input energy?
 
-**Understanding target:** Follow the sufficient count sums and binomial entropy terms in the exact thinning identity.
+**Understanding target:** Follow the thinning identity, its row-sum entropy bound, and the binomial collision estimate; explain why the resulting ceiling permits every finite-mean input.
 
-**Dependencies:** [M07](#m07), [M10](#m10), [M17](#m17).
+**Dependencies:** [M07](#m07), [M08](#m08), [M10](#m10), [M17](#m17).
 
-**Story role:** Find a converse controlled by inaccessible loss rather than incident power.
+**Story role:** Add the loss-dependent converse to the energy-only bound.
 
-**Conceptual connection:** The same multinomial triple appears in two conditional entropy ledgers, allowing its conditional entropy to cancel.
+**Conceptual connection:** Sufficient count sums reveal an entropy cancellation; the remaining estimate is uniform in the input law.
 
-**Sources:** Preskill §§10.1.2; 10.1.4; [project bridge](PRESKILL_BRIDGE.md#counting-mechanism); [scientific account](../science/counting_bounds.md).
+**Sources:** Preskill §§10.1.2; 10.1.4; 10.2.1; [project bridge](PRESKILL_BRIDGE.md#counting-mechanism); [scientific account](../science/counting_bounds.md).
 
 <a id="m20"></a>
-### M20 — A uniform loss-dependent counting ceiling
+### M20 — The matching counting construction
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why does the thinning identity bound every finite-mean input?
+**Central question:** Which allowed input attains the half-logarithmic order?
 
-**Understanding target:** Connect thinning row sums to entropy gain and binomial collision estimates to the loss-dependent plateau bound.
+**Understanding target:** Derive the conditional negative-binomial law for a thermal average input, use its collision and logarithmic-moment estimates, and combine both converses at energy min(E,1/b).
 
-**Dependencies:** [M08](#m08), [M10](#m10), [M19](#m19).
+**Dependencies:** [M09](#m09), [M13](#m13), [M17](#m17), [M18](#m18), [M19](#m19).
 
-**Story role:** Complete the second counting converse.
+**Story role:** Complete the counting branch with a matching achievable rate.
 
-**Conceptual connection:** The bound is uniform in the input law and is not an asymptotic expansion for one preferred distribution.
+**Conceptual connection:** A thermal construction establishes the leading order without identifying the exact finite-energy optimizer.
 
-**Sources:** Preskill §§10.1.4; 10.2.1; [project bridge](PRESKILL_BRIDGE.md#counting-mechanism); [scientific account](../science/counting_bounds.md).
+**Sources:** Preskill §§10.1.2; 10.2.5; 10.7.1; [project bridge](PRESKILL_BRIDGE.md#counting-mechanism); [scientific accounts](../science/counting_bounds.md), [uniform domain](../science/uniform_laws.md).
 
 <a id="m21"></a>
-### M21 — The counting construction
+### M21 — A complete coherent measurement on one mode
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Which allowed input supplies the matching logarithmic order?
+**Central question:** What measurement changes the useful photon-number coherence?
 
-**Understanding target:** Derive the conditional negative-binomial law from a thermal average input and explain its collision-entropy and geometric-tail estimates.
-
-**Dependencies:** [M07](#m07), [M08](#m08), [M09](#m09), [M13](#m13), [M17](#m17).
-
-**Story role:** Supply an operational lower bound rather than infer tightness from a converse.
-
-**Conceptual connection:** Using a thermal input for achievability does not claim it is the exact finite-energy optimizer.
-
-**Sources:** Preskill §§10.1.2; 10.2.5; [project bridge](PRESKILL_BRIDGE.md#counting-mechanism); [scientific account](../science/counting_bounds.md).
-
-<a id="m22"></a>
-### M22 — The half-logarithmic counting law
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How do the energy and loss bounds join uniformly?
-
-**Understanding target:** Choose the allowed construction energy min(E,1/b), combine both converses, and track which constants depend only on the fixed received fraction.
-
-**Dependencies:** [M18](#m18), [M20](#m20), [M21](#m21).
-
-**Story role:** Synthesize the counting branch of the proof.
-
-**Conceptual connection:** A minimum of two physical resource scales controls both the achievable and converse logarithms.
-
-**Sources:** Preskill §§10.7.1; [project bridge](PRESKILL_BRIDGE.md#limits); [scientific account](../science/uniform_laws.md).
-
-<a id="m23"></a>
-### M23 — A complete coherent measurement on one mode
-
-**Phase:** Narrative/innovation.
-
-**Central question:** What physical POVM replaces counting?
-
-**Understanding target:** Verify the finite fourth-root-phase effects, their sum, the full-Fock-space completion, and the absence of postselection.
+**Understanding target:** Verify the finite phase effects and full-space completion, and explain why classical processing after counting cannot reproduce coherent superposition of measurement branches.
 
 **Dependencies:** [M05](#m05), [M08](#m08), [M13](#m13), [M14](#m14).
 
-**Story role:** Start the contrasting constructive detector argument.
+**Story role:** Begin the constructive detector argument.
 
-**Conceptual connection:** Coherent control over number levels within one mode does not require quantum memory between collected modes.
+**Conceptual connection:** Coherent control within one oscillator differs from joint quantum processing of collected modes.
 
 **Sources:** Preskill §§10.2.2; 10.6.1; [project bridge](PRESKILL_BRIDGE.md#coherence); [scientific account](../science/coherent_measurements.md).
 
-<a id="m24"></a>
-### M24 — The phase-averaged purity identity
+<a id="m22"></a>
+### M22 — Purity moments and one selected Fourier setting
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why do fourth-root phases leave only the needed pairings?
+**Central question:** Why can a structured finite detector replace the independent phase family?
 
-**Understanding target:** Track the block indices, the two surviving pairings, and the diagonal subtraction term; explain why independent signs are not equivalent.
+**Understanding target:** Track the two fourth-moment pairings and diagonal subtraction, reproduce them with the inherited quadratic-phase design, and select a fixed setting with linearly many outcomes.
 
-**Dependencies:** [M08](#m08), [M23](#m23).
+**Dependencies:** [M08](#m08), [M21](#m21).
 
-**Story role:** Expose the calculable mechanism behind the coherent detector.
+**Story role:** Turn a computable phase average into a specified detector.
 
-**Conceptual connection:** A finite phase average converts many conditional quantum states into two marginal purities and a nonnegative correction.
+**Conceptual connection:** Universal moment reproduction and existence of one useful measurement have different outcome-count requirements.
 
 **Sources:** Preskill §§10.9; [project bridge](PRESKILL_BRIDGE.md#coherence); [scientific account](../science/coherent_measurements.md).
 
-<a id="m25"></a>
-### M25 — From purity to a one-mode rate
+<a id="m23"></a>
+### M23 — From purity to an achievable optical rate
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How does the finite phase measurement give a full-Fock-space guarantee?
+**Central question:** How does a finite detector yield a full-Fock-space rate guarantee?
 
-**Understanding target:** Apply entropy versus purity, Jensen and concavity, then take the coded cutoff limit with thermal entropy tails and energy slack.
+**Understanding target:** Apply entropy versus purity and concavity, evaluate the thermal marginals, and take the coding limit before the cutoff limit while retaining strict mean-energy slack.
 
-**Dependencies:** [M09](#m09), [M11](#m11), [M13](#m13), [M24](#m24).
+**Dependencies:** [M09](#m09), [M11](#m11), [M13](#m13), [M22](#m22).
 
-**Story role:** Connect the construction to an actual achievable capacity lower bound.
+**Story role:** Establish the individual-mode capacity lower bound.
 
-**Conceptual connection:** The helper remains individual-mode even though the endpoints use long quantum codes.
+**Conceptual connection:** The chosen finite support enables achievability without imposing a peak constraint on the converse.
 
-**Sources:** Preskill §§10.7.1–10.7.2; 10.9.4; [project bridge](PRESKILL_BRIDGE.md#coherence); [scientific account](../science/coherent_measurements.md).
+**Sources:** Preskill §§10.7.1–10.7.2; 10.9.4; [project bridge](PRESKILL_BRIDGE.md#limits); [scientific account](../science/coherent_measurements.md).
+
+<a id="m24"></a>
+### M24 — The constant gap and uniform detector comparison
+
+**Phase:** Narrative/innovation.
+
+**Central question:** How close is individual-mode detection to collective assistance?
+
+**Understanding target:** Compare the coherent lower bound with the inherited collective formula, obtain the log2(e) finite-energy gap, and join the counting and coherent laws in the fixed-a uniform domain.
+
+**Dependencies:** [M16](#m16), [M20](#m20), [M23](#m23).
+
+**Story role:** Assemble the main detector-class theorem.
+
+**Conceptual connection:** A bounded additive gap gives the same leading rate without proving an exact individual-mode optimum; fixed-loss saturation is a different limit.
+
+**Sources:** Preskill §§10.7.1; [project bridge](PRESKILL_BRIDGE.md#synthesis); [scientific accounts](../science/coherent_measurements.md), [uniform laws](../science/uniform_laws.md).
+
+<a id="m25"></a>
+### M25 — Two finite separations and their input classes
+
+**Phase:** Narrative/innovation.
+
+**Central question:** What do the numerical certificates actually separate?
+
+**Understanding target:** Distinguish the unrestricted mean-energy optical certificate from the two-photon-cutoff example; explain the global counting upper bounds, coherent achievable rates, and role of rational enclosures.
+
+**Dependencies:** [M17](#m17), [M21](#m21), [M23](#m23), [M24](#m24).
+
+**Story role:** Connect the universal comparison to finite, reproducible witnesses.
+
+**Conceptual connection:** Vacuum/one-photon counting optimality is compatible with a two-photon counterexample and an unbounded full-oscillator disadvantage.
+
+**Sources:** Preskill §§10.7.1; [project bridge](PRESKILL_BRIDGE.md#synthesis); [scientific accounts](../science/qubit_optical_bridge.md), [finite optical certificate](../science/uniform_laws.md).
 
 <a id="m26"></a>
-### M26 — The constant gap to collective assistance
+### M26 — Cutoff, classical record, and control accuracy
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why can joint helper processing add at most a bounded rate?
+**Central question:** Which finite detector resources suffice for a specified rate gap?
 
-**Understanding target:** Compare the purity lower bound with the collective entropy formula and verify the scalar log2(e) bound, including clipping a negative lower bound at zero.
+**Understanding target:** Connect thermal tail mass to cutoff size, count the complete transmitted record, and interpret the continuity bound through the actual receiver and logical-reference state.
 
-**Dependencies:** [M16](#m16), [M25](#m25).
+**Dependencies:** [M06](#m06), [M13](#m13), [M22](#m22), [M24](#m24).
 
-**Story role:** Quantify the residual value of cross-mode helper processing.
+**Story role:** Make the abstract coherent detector's finite requirements explicit.
 
-**Conceptual connection:** A lower bound suffices to prove proximity to an optimum without identifying the exact individual-mode optimum.
+**Conceptual connection:** A logarithmic record requirement, a finite accuracy guarantee, and a physical synthesis cost are different statements.
 
-**Sources:** Preskill §§10.7.1; [project bridge](PRESKILL_BRIDGE.md#synthesis); [scientific account](../science/coherent_measurements.md).
+**Sources:** Preskill §§10.6.1–10.6.3; 10.7.1; [project bridge](PRESKILL_BRIDGE.md#record-resources); [scientific account](../science/detector_resources.md).
 
 <a id="m27"></a>
-### M27 — The full energy–collection crossover
+### M27 — A finite phase reference and conserving control
 
 **Phase:** Narrative/innovation.
 
-**Central question:** When is the factor-of-two statement valid?
+**Central question:** How can a detector mix photon numbers while conserving total excitation?
 
-**Understanding target:** Combine the counting and coherent laws with the fixed-a uniform domain; distinguish joint high-energy/low-loss paths from fixed-loss saturation.
+**Understanding target:** Follow the finite sine reference and total-number-sector lift, identify the reference shifts, and distinguish the initial photon stock from the net photons transferred during control.
 
-**Dependencies:** [M22](#m22), [M26](#m26).
+**Dependencies:** [M02](#m02), [M05](#m05), [M14](#m14), [M22](#m22), [M26](#m26).
 
-**Story role:** Join the two detector branches into the main theorem.
+**Story role:** Supply an explicit finite apparatus for the prescribed coherent detector.
 
-**Conceptual connection:** An asymptotic leading coefficient is not a universal finite-energy ratio.
+**Conceptual connection:** Gate approximation can be realized with a finite reference that becomes correlated or changes after use; exact return is a separate demand.
 
-**Sources:** Preskill §§10.7.1; [project bridge](PRESKILL_BRIDGE.md#limits); [scientific account](../science/uniform_laws.md).
+**Sources:** Preskill §§10.2.5; 10.7.1; [project bridge](PRESKILL_BRIDGE.md#phase-reference); [scientific account](../science/finite_reference.md).
 
 <a id="m28"></a>
-### M28 — Finite certificates and their meaning
+### M28 — Pay the discarded-reference entropy directly
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What does the finite-energy example certify?
+**Central question:** Why does communication need less than a shrinking uniform gate error?
 
-**Understanding target:** Interpret the all-input counting upper bound, achieved coherent lower bound, and collective value; distinguish rational enclosures from measured device performance.
+**Understanding target:** Retain the actual ZW complement, bound the entropy of conditional translated sine references, and combine this with receiver entropy concavity to obtain a linear sufficient reference mean.
 
-**Dependencies:** [M17](#m17), [M25](#m25), [M26](#m26), [M27](#m27).
+**Dependencies:** [M06](#m06), [M08](#m08), [M09](#m09), [M23](#m23), [M27](#m27).
 
-**Story role:** Connect the general theorem to a reproducible finite separation.
+**Story role:** Turn the finite apparatus into a communication-specific resource bound.
 
-**Conceptual connection:** A numerical certificate validates the evaluation of proved bounds, not the universal channel theorem by itself.
+**Conceptual connection:** Maximum-entropy reasoning can bound discarded information using an auxiliary Laplacian mode number without identifying it with physical photon energy.
 
-**Sources:** Preskill §§10.7.1; [project bridge](PRESKILL_BRIDGE.md#counting-example); [scientific account](../science/uniform_laws.md).
+**Sources:** Preskill §§10.2.2–10.2.5; 10.7.1; [project bridge](PRESKILL_BRIDGE.md#phase-reference); [scientific account](../science/direct_reference.md).
 
 <a id="m29"></a>
-### M29 — The physical resource distinction
+### M29 — Separate local invariance and all-code resource converses
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Which coherence is useful, and what remains unpriced?
+**Central question:** What operation constraint makes reference spread and mean stock necessary?
 
-**Understanding target:** Distinguish within-mode coherence, cross-mode control, endpoint coding, phase references, and classical postprocessing; state the construction’s implementation limits.
+**Understanding target:** Refine the record by each local conserved total, bound logical coherent information by conditional number entropy, and distinguish the variance/width estimate from the first-absolute-moment mean-energy bound.
 
-**Dependencies:** [M14](#m14), [M23](#m23), [M27](#m27), [M28](#m28).
+**Dependencies:** [M02](#m02), [M07](#m07), [M10](#m10), [M18](#m18), [M27](#m27).
 
-**Story role:** Translate the theorem back to the physical apparatus.
+**Story role:** Supply converses for every allowed code rather than only the constructed detector.
 
-**Conceptual connection:** Photon counting is already non-Gaussian, so Gaussianity is not the resource distinction proved here.
+**Conceptual connection:** Large variance at fixed mean defeats a variance-to-mean inference; the mean converse instead permits infinite variance directly. Global conservation alone is a broader operation class.
 
-**Sources:** Preskill §§10.2.2; 10.7.1; [project bridge](PRESKILL_BRIDGE.md#synthesis); [scientific account](../science/interpretation.md).
+**Sources:** Preskill §§10.1.1–10.1.2; 10.2.2; 10.7.1; [project bridge](PRESKILL_BRIDGE.md#local-reference); [scientific accounts](../science/reference_width_bounds.md), [mean-energy converse](../science/reference_mean_bounds.md).
 
 <a id="m30"></a>
-### M30 — The complete scientific story
+### M30 — The complete detector and mean-reference capacity story
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What has been established beyond the inherited benchmark?
+**Central question:** How do detector choice and a charged phase-reference budget determine the rate?
 
-**Understanding target:** Explain the model, both detector mechanisms, uniform laws, constant gap, finite certificate, source attribution, and decisive boundaries as one connected argument.
+**Understanding target:** Combine counting, the direct finite-reference construction, and the all-code mean converse into the additive capacity profile; state its energy-driven domain, bounded-gap requirement, attribution, and remaining implementation limits.
 
-**Dependencies:** [M16](#m16), [M22](#m22), [M26](#m26), [M27](#m27), [M28](#m28), [M29](#m29).
+**Dependencies:** [M16](#m16), [M20](#m20), [M24](#m24), [M25](#m25), [M26](#m26), [M28](#m28), [M29](#m29).
 
-**Story role:** Finish with the complete contribution and its evidence boundaries.
+**Story role:** Finish with the connected scientific contribution and its operational boundaries.
 
-**Conceptual connection:** Separate textbook foundations, inherited research results, local derivations, and still-unoptimized implementation resources.
+**Conceptual connection:** Linear mean reference stock is sufficient and necessary for a bounded gap under separate local invariance; neither the profile nor the record theorem determines a joint resource frontier or preparation work.
 
-**Sources:** Preskill §§10.10; [project bridge](PRESKILL_BRIDGE.md#synthesis); [scientific account](../science/README.md).
+**Sources:** Preskill §§10.10; [project bridge](PRESKILL_BRIDGE.md#synthesis); [scientific accounts](../science/reference_mean_bounds.md), [proof route](../science/README.md).

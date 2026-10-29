@@ -82,7 +82,7 @@ Q_1(E)\ge
 
 Consequently $`0\le Q_{\rm coll}-Q_1\le\log_2e`$ for every finite energy. All three capacities vanish when $`a\le b`$.
 
-For fixed $`0<a<1`$, let $`b_0=\frac12\min\{a,1-a\}`$. Uniformly over $`E\ge1`$ and $`0\le b\le b_0`$, with $`L=\min\{E,1/b\}`$ and $`1/0=\infty`$,
+For fixed $`0\lt a\lt 1`$, let $`b_0=\frac12\min\{a,1-a\}`$. Uniformly over $`E\ge1`$ and $`0\le b\le b_0`$, with $`L=\min\{E,1/b\}`$ and $`1/0=\infty`$,
 
 ```math
 Q_{\rm cnt}(E)=\frac12\log_2L+O_a(1),

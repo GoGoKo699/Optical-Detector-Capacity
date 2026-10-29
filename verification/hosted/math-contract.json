@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 8,
+      "source_sha256": "d67022f2fbdef525b711a3998ebcd4f07c0e0eafb308feb44dcef48aeb4e7521",
+      "expected_text": "Qcnt(E)=12log2L+Oa(1),Q1(E)=Qcoll(E)+O(1)=log2L+Oa(1).",
+      "required_text": [
+        "Qcnt(E)",
+        "Q1(E)",
+        "Qcoll(E)",
+        "log2L"
+      ]
+    },
+    {
+      "path": "README.md",
+      "index": 14,
+      "source_sha256": "a4f4edd4f2f6bbd4bcf04599650f30096b1317920ca84c876d7da6a3983a6436",
+      "expected_text": "0≤Qcoll(E)−Q1(E)≤log2e.",
+      "required_text": [
+        "0≤Qcoll(E)−Q1(E)≤log2e"
+      ]
+    },
+    {
+      "path": "README.md",
+      "index": 21,
+      "source_sha256": "e985185c652a0038e0dc7840a07ff69b652debebf2e4536c0fbda78ad318ee8b",
+      "expected_text": "Qlocmean(E,M)=min{log2E,max{12log2E,log2(M+1)}}+Oa(1).",
+      "required_text": [
+        "Qlocmean(E,M)",
+        "log2E",
+        "log2(M+1)"
+      ]
+    },
+    {
+      "path": "science/reference_mean_bounds.md",
+      "index": 8,
+      "source_sha256": "99567a82318dd200425a7004591ee6264e8e938f6cf9cf670dcca3cab88564a4",
+      "expected_text": "Qlocmean(E,M)≤min{Qcoll(E),log2[2e(AE+rM+14)]}.",
+      "required_text": [
+        "Qlocmean(E,M)",
+        "Qcoll(E)",
+        "2e",
+        "AE+rM+14"
+      ]
+    },
+    {
+      "path": "science/reference_mean_bounds.md",
+      "index": 37,
+      "source_sha256": "01446d248d0a558081db16034db2efc9c2acb82c3d0ca07abecf0efe27a314b0",
+      "expected_text": "Qlocmean(E,M)=min{log2E,max{12log2E,log2(M+1)}}+Oa(1).",
+      "required_text": [
+        "Qlocmean(E,M)",
+        "log2E",
+        "log2(M+1)"
+      ]
+    },
+    {
+      "path": "science/qubit_optical_bridge.md",
+      "index": 5,
+      "source_sha256": "50004cd7e280d8834f7b8e797daa26ef304237cef1e6507b4df1932966cb743a",
+      "expected_text": "Qcnt[2]<0.318,R±[2]>0.329,R±[2]−Qcnt[2]>0.011",
+      "required_text": [
+        "Qcnt[2]<0.318",
+        "R±[2]>0.329",
+        "R±[2]−Qcnt[2]>0.011"
+      ]
+    }
+  ]
+}

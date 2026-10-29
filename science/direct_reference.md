@@ -18,9 +18,9 @@ neither a new general reference construction nor a priority claim is needed.
 
 ## The actual channel and its reference output
 
-Assume $`a>b\ge0`$, $`0<a<1`$, and mean signal budget $`E>0`$. Choose a
+Assume $`a>b\ge0`$, $`0\lt a\lt 1`$, and mean signal budget $`E>0`$. Choose a
 thermal average input of mean $`x\le E`$, normalized after restriction to
-$`0,\ldots,d-1`$, where $`d\ge2`$. Its mean is $`x_d<x`$. Let $`q`$ be the
+$`0,\ldots,d-1`$, where $`d\ge2`$. Its mean is $`x_d\lt x`$. Let $`q`$ be the
 smallest odd prime at least $`d`$, put $`h=q-1`$, and choose the predetermined
 setting $`s`$ of $`U=\mathcal F_qD_s`$ by the
 [ideal fixed-setting construction](coherent_measurements.md#one-predetermined-fourier-measurement-suffices).
@@ -55,7 +55,7 @@ give an exact uniform count distribution and the conditional reference state
 \Pr(Y=j)=\frac1q,\qquad
 \rho_{W|j}=\sum_{k=0}^{d-1}p_k
 |T_{k-j}\xi_K\rangle\langle T_{k-j}\xi_K|,
-\qquad 0\le j<q.
+\qquad 0\le j\lt q.
 ```
 
 Each state on the right has support in an interval of

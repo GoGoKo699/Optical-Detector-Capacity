@@ -177,7 +177,7 @@ V\ge\frac{c^2}{a^2}\left[
 -\frac{a(a+c)}cE-\frac1{12}\right].
 ```
 
-For fixed $`0<a<1`$ and bounded $`bE`$ as $`E\to\infty`$,
+For fixed $`0\lt a\lt 1`$ and bounded $`bE`$ as $`E\to\infty`$,
 $`c=1-a-b\to1-a>0`$. A fixed additive gap to the full logarithmic rate
 therefore requires average reference variance $`V=\Omega(E^2)`$. A common
 per-use support-width bound must satisfy $`K=\Omega(E)`$. For nonuniform
@@ -213,7 +213,7 @@ inferring a mean bound from variance.
 Let $`Q_{\rm loc}^{[K]}(E)`$ be the capacity in the separate-invariance class
 above with a common bound of $`K\ge1`$ consecutive number levels for each
 initial reference. Classical helper records are unrestricted in this profile.
-Fix $`0<a<1`$ and use the energy-driven part of the original
+Fix $`0\lt a\lt 1`$ and use the energy-driven part of the original
 [uniform domain](uniform_laws.md):
 
 ```math

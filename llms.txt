@@ -1,53 +1,73 @@
 # Optical Detector Capacity
 
-Study quantum transmission through a vacuum splitter with received fraction a,
-inaccessible fraction b, collected fraction c=1-a-b, and mean signal photons E.
-The helper sends only a classical record to the receiver.
+Quantum communication through a vacuum splitter: fraction a reaches the receiver,
+b is inaccessible, and c=1-a-b reaches a measuring helper. The helper sends a
+classical record only. E is mean incident signal photons per original mode;
+endpoint quantum block coding is unrestricted.
 
-Read science/model.md for the access contract and exact claims, then science/README.md
-for proof dependencies. science/capacity_reduction.md covers arbitrary encoders,
-joint degradation, the inherited collective capacity, and the exact counting
-variational reduction. science/counting_bounds.md proves the energy and loss
-converses plus thermal lower bound. science/coherent_measurements.md supplies a
-finite fourth-root-phase POVM, its purity identity, and the log2(e) additive gap.
-science/uniform_laws.md fixes the uniform domain and rational finite comparison.
-science/interpretation.md explains resources and scope. references/RELATED_WORK.md
-and references/references.bib identify inherited ingredients and comparison limits.
-verification/README.md describes verification/verify.py and expected.json.
+Main comparison, in the fixed-a uniform domain stated in science/uniform_laws.md:
+Qcnt(E)=0.5 log2 L+O_a(1), Q1(E)=log2 L+O_a(1), L=min(E,1/b), with 1/0=infinity.
+At every finite energy, 0<=Qcoll(E)-Q1(E)<=log2(e). The collective benchmark is
+inherited from Partial-Monitoring-Capacity. Coherence across photon numbers
+within one collected mode supplies the full leading rate. Photon counting is
+itself non-Gaussian, so this is not a Gaussian-versus-non-Gaussian theorem.
 
-Preserve these distinctions:
-- Energy is a mean signal constraint, not a peak or a second-moment constraint.
-- Counting means number-diagonal measurement before classical postprocessing;
-  coherent preprocessing changes the detector class.
-- Individual-mode helper measurements do not restrict endpoint block coding.
-- The local POVM can use one selected quadratic-phase Fourier setting with O(d) coded outcomes at cutoff dimension d. Physical gate efficiency, reference preparation work, and reset costs remain unproved. science/qubit_optical_bridge.md certifies counting suboptimality under a two-photon cutoff, not an upper bound on full-Fock counting.
-- science/detector_resources.md gives explicit cutoff and sufficient phase/Fourier accuracy, the uniform additive tradeoff Q(E,r)=min(r,log2 L)+O_a(1), and a mean-excitation account for the specified Fourier stage. The record converse prices the actual finite/countable message, including every announced setting; it is a weak converse, not an exact finite-energy frontier.
-- science/finite_reference.md applies established finite sine-battery/conserving-lift machinery. Initial mean reference photons have matching order q/sqrt(epsilon) for uniformly implementing the prescribed q-level gate. The optical capacity consequence is a sufficient fresh-reference budget O((L+1)sqrt(ln(L+2))) at fixed additive tolerances, improved by the direct entropy argument below. Gate-level lower bounds do not themselves lower-bound every capacity-achieving detector. Efficient synthesis, exact catalyst return, and indefinite reuse remain unproved.
-- science/direct_reference.md improves the sufficient communication-specific mean reference stock to O(L+1) at fixed additive rate gap. It bounds entropy of conditional mixtures of translated sine references and keeps the complete ZW complement. It does not require shrinking uniform gate error.
-- science/reference_width_bounds.md gives an all-code ceiling using initial reference variance under final-effect commutation with EACH local conserved total number, with signal-independent apparatus initialization. A bounded additive rate gap when E=L forces variance Omega(E^2) and bounded number-support width Omega(E). The variance argument alone cannot infer mean cost; the separate first-moment proof below does. Global-total-only conservation and coherent reference reuse need not satisfy this contract.
-- In that file, the complete energy-driven width profile is Qloc^[K](E)=min(log2 E,max(0.5log2 E,log2 K))+O_a(1) in the stated uniform domain. Bounded additive loss needs width Omega(E); leading coefficient one alone is weaker. Classical records are unlimited for this profile, so it is not a joint finite-record/reference frontier.
-- science/reference_mean_bounds.md prices nonnegative initial reference photon number with average budget M and the SAME separate-local-invariance contract. Its all-code bound is min(Qcoll(E),log2[2e(sqrt(a(a+c)E/c)+(a/c)M+1/4)]). Conditional unit-uniform dither and the standard Laplace entropy bound use only first moments, including infinite-variance references. In the energy-driven uniform domain, Qloc^mean(E,M)=min(log2 E,max(0.5log2 E,log2(M+1)))+O_a(1). Linear initial mean stock is necessary and sufficient for a bounded additive rate gap. This does not price preparation work/reset/reuse or optimize a joint classical-record/reference budget.
-- The collective optical capacity is inherited, not a second novelty claim.
-- The half-log law is uniform for fixed 0<a<1, E>=1 and 0<=b<=min(a,1-a)/2.
-- All capacities vanish at a<=b. With c=0 they reduce to ordinary pure loss.
-- No exact finite-energy counting optimum or exact individual-mode capacity is given.
-- Finite checks support their tested ingredients; written proofs and cited coding
-  theorems establish arbitrary-input and asymptotic statements.
+The mean-reference extension prices average initial apparatus photons M. Under
+separate local invariance of every effective helper effect with each
+N_Di+N_Wi, and initial apparatus independent of the encoded signal,
+Qloc_mean(E,M)=min(log2 E,max(0.5 log2 E,log2(M+1)))+O_a(1).
+Its domain is fixed 0<a<1, E>=1, M>=0, 0<=b<=min(a,1-a)/2, bE<=1, with
+unrestricted classical records. The converse includes arbitrary endpoint codes
+and infinite-variance references. Fresh sine references attain the lower order.
+A bounded additive rate gap requires and permits linear mean stock. Global-total-
+only invariance, correlated coherent reuse, preparation work, and reset are
+separate questions; the profile is not a joint record/reference frontier.
+
+Scientific route:
+- science/model.md: base access contract and detector-class definitions.
+- science/README.md: connected comparison and resource proof routes.
+- science/capacity_reduction.md: arbitrary encoders, joint degradation, inherited
+  collective capacity, and counting variational reduction.
+- science/counting_bounds.md: all-input energy/loss converses and thermal lower bound.
+- science/coherent_measurements.md: phase purity identity, inherited quadratic
+  design, selected Fourier setting with O(d) outcomes, and constant collective gap.
+- science/uniform_laws.md: exact uniform domain and certified optical comparison.
+- science/qubit_optical_bridge.md: certified separation under a two-photon cutoff.
+- science/detector_resources.md: finite cutoff, control-error bound, complete record
+  accounting, and the separate classical-record capacity tradeoff.
+- science/finite_reference.md: established conserving lift and sine-reference
+  implementation of the prescribed gate, with finite energy and error accounting.
+- science/direct_reference.md: conditional reference-entropy bound giving O(L+1)
+  sufficient initial mean photons for communication at fixed additive rate gap.
+- science/reference_width_bounds.md: local-invariance variance/width converse and
+  complete energy-driven support-width profile.
+- science/reference_mean_bounds.md: first-absolute-moment all-code converse and
+  matched mean-reference profile, without a reference-variance assumption.
+- science/interpretation.md: physical meaning and scope.
+- references/RELATED_WORK.md and references/references.bib: primary attribution.
+- verification/README.md: finite checks, exact arithmetic certificates, and limits.
+
+Mean energy is not a peak or second-moment constraint. Finite cutoff codes supply
+achievability; only the explicitly restricted two-photon example imposes that
+cutoff on competitors. A discarded apparatus reference belongs in the actual
+complement. Code-level coherent information can always be evaluated as -S(R|BX);
+subtracting only the original inaccessible optical entropy can omit apparatus
+information. Individual-mode helper processing does not restrict endpoint coding.
 
 Learning route:
-- learning/README.md: entrypoint, selected source version, reading order and checks.
-- learning/MILESTONES.md: exactly M01-M30, with 14 background/preliminaries and
-  16 narrative/innovation targets, earlier dependencies and scientific pointers.
+- learning/README.md: focused entrance and reading paths.
+- learning/MILESTONES.md: exactly M01-M30, comprising 14 background/preliminaries
+  and 16 narrative/innovation milestones, with earlier dependencies and sources.
 - learning/PRESKILL_BRIDGE.md: John Preskill, Quantum Shannon Theory, Chapter 10,
-  arXiv:1604.07450v5 (updated June 2025, posted 8 July 2025); section map,
-  notation translation, a worked flagged-counting example, optical entropy,
-  detector mechanisms, finite-cutoff coding and crossover limits.
-- verification/check_learning.py and verification/test_learning.py: repeatable
-  checks of the shared map, navigation, source pin and worked calculations.
+  arXiv:1604.07450v5 (updated June 2025, posted 8 July 2025), is the single
+  educational anchor. The bridge covers notation, a worked counting channel,
+  optical entropy, finite reference, and local mean-resource capacity.
+- verification/check_learning.py and verification/test_learning.py: source pin,
+  navigation, milestone structure, and worked-example checks.
 
-Preskill's Q_1 is a one-use optimized coherent-information quantity. Here Q_1(E)
-is an asymptotic capacity with individual-mode helper POVMs and arbitrary endpoint
-block codes. Preskill's environment E must not be confused with our energy E;
-after a rank-one helper measurement the actual complement includes Z and a copied
-classical flag. The chapter is a foundation, not a source of the detector theorem.
-The common route contains no personal assessment procedure or learner records.
+Preskill's Q_1 is a one-use coherent-information optimization. Here Q1(E) is an
+asymptotic capacity with individual-mode helper POVMs and arbitrary endpoint
+codes. The logical reference R tests transmission; the apparatus reference W
+supplies coherence. The chapter supplies foundations, not the detector or
+reference-resource theorems. Written proofs and cited coding results establish
+universal statements; finite tests verify their specified finite ingredients.

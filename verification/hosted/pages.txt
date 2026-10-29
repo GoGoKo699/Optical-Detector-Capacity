@@ -1,0 +1,22 @@
+# All current reader-facing Markdown: science, proofs, learning, sources, and verification.
+# Contributor instructions and protected historical archives are outside this hosted reader review.
+README.md
+learning/MILESTONES.md
+learning/PRESKILL_BRIDGE.md
+learning/README.md
+references/RELATED_WORK.md
+science/README.md
+science/capacity_reduction.md
+science/coherent_measurements.md
+science/counting_bounds.md
+science/detector_resources.md
+science/direct_reference.md
+science/finite_reference.md
+science/interpretation.md
+science/model.md
+science/qubit_optical_bridge.md
+science/reference_mean_bounds.md
+science/reference_width_bounds.md
+science/uniform_laws.md
+verification/FURNISHING_CHECK.md
+verification/README.md
