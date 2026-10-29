@@ -24,9 +24,11 @@ Thus joint processing across collected modes improves on the best individual-mod
 
 The [structured detector construction](science/coherent_measurements.md) retains this rate guarantee using one preselected quadratic phase followed by a finite Fock-space Fourier measurement. At cutoff dimension $`d\ge2`$, fewer than $`2d`$ outcomes have nonzero probability on the coded support. The [qubit-to-optical bridge](science/qubit_optical_bridge.md) also shows that a three-outcome detector already beats optimized counting when inputs are restricted to at most two photons.
 
-The [resource account](science/detector_resources.md) makes the cutoff and accuracy quantitative. At fixed additive tolerance, $`O(L+1)`$ cutoff levels and $`\log_2L+O(1)`$ helper record bits per mode suffice; recovering the full leading rate requires that same leading record cost. It also bounds rate loss from detector error and accounts for the specified Fourier stage's change in mean photon number.
+The [resource account](science/detector_resources.md) makes the cutoff and accuracy quantitative. At fixed additive tolerance, $`O(L+1)`$ cutoff levels and $`\log_2L+O(1)`$ helper record bits per mode suffice; a bounded additive gap to the full logarithmic rate requires the same record cost up to constants. It also bounds rate loss from detector error and accounts for the specified Fourier stage's change in mean photon number.
 
 With a helper record budget $`r_c`$, the [rate tradeoff](science/detector_resources.md) is $`Q(E,r_c)=\min\{r_c,\log_2L\}+O_a(1)`$ for fixed received fraction $`a`$, $`a>b`$, and $`L\ge1`$. A [finite-reference realization](science/finite_reference.md) supplies the prescribed Fourier gate using number-conserving control and a finite sine reference. Its initial reference mean has order $`q/\sqrt\varepsilon`$ for small uniform gate error $`\varepsilon`$ in half diamond distance; this gate-level resource bound does not determine the minimum reference needed by every capacity-achieving measurement.
+
+For communication, [direct reference-entropy accounting](science/direct_reference.md) gives a sharper sufficient stock: fresh mean photons $`O(L+1)`$ retain any fixed additive rate guarantee of the construction. The [local-reference converse](science/reference_width_bounds.md) bounds every code when helper effects preserve each mode's total number. In the energy-driven regime $`E=L`$, a bounded additive gap requires reference variance $`\Omega(E^2)`$ and number-support width $`\Omega(E)`$. More generally, width $`K=E^\alpha`$ gives leading rate coefficient $`\min\{1,\max\{1/2,\alpha\}\}`$ in the stated local model. This is a variance/support statement; a general lower bound on mean reference energy remains open.
 
 ## Finite-energy separation
 
@@ -53,6 +55,8 @@ Start with the [physical model and claims](science/model.md), then follow the [c
 | Where does the qubit counting optimum first fail? | [Two-photon separation](science/qubit_optical_bridge.md) |
 | What cutoff, record length, and control accuracy suffice? | [Detector resources](science/detector_resources.md) |
 | Can a finite phase reference implement this detector? | [Conserving realization and reference budget](science/finite_reference.md) |
+| What reference stock suffices directly for communication? | [Discarded-reference entropy bound](science/direct_reference.md) |
+| What local reference fluctuations are unavoidable? | [All-code variance and support-width bound](science/reference_width_bounds.md) |
 | What is uniform as energy and inaccessible loss vary? | [Uniform laws](science/uniform_laws.md) |
 | What changes physically, and what remains outside the result? | [Interpretation](science/interpretation.md) |
 | Which ingredients and comparisons are inherited? | [Related work](references/RELATED_WORK.md) |

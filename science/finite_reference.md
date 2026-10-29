@@ -228,6 +228,13 @@ The reference mean counts supplied stock at the start of each use, not net
 consumed energy or dissipated work. The stronger gate-level lower bound does
 not establish that this stock scaling is necessary for the capacity task.
 
+For the communication task, the [direct reference-entropy argument](direct_reference.md)
+gives the sharper sufficient mean stock $`O_{\gamma,\beta}(L+1)`$ at the same
+fixed additive rate tolerances. It bounds information in the actual discarded
+reference rather than imposing a shrinking uniform gate error. The
+$`O((L+1)\sqrt{\ln(L+2)})`$ estimate above remains a sufficient consequence
+of the uniform gate-accuracy route.
+
 For the number-diagonal helper average input, the finite-reference implementation
 still gives a uniform distribution over the $`q`$ final detector numbers. Exact
 total-number conservation therefore fixes the mean reference change:

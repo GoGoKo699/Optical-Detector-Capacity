@@ -34,6 +34,15 @@ measurement with the same output statistics or on every detector attaining the
 optical communication rate. Fresh references preserve memorylessness; their
 preparation work, reset, and repeated-use behavior require additional analysis.
 
+The [direct entropy calculation](direct_reference.md) retains the rate guarantee
+with fresh reference mean $`O(L+1)`$ by paying information left in the reference.
+Under a stronger per-mode conservation contract, the
+[variance converse](reference_width_bounds.md) limits all codes, including
+coherent inputs and mixed encoders. Its required support width is linear in
+signal energy when $`E=L`$. Global conservation alone, coherent reuse of one
+reference across modes, and a general mean-reference-energy optimum are not
+covered by that converse.
+
 Photon counting is itself a non-Gaussian measurement. The separation is therefore not a no-go theorem for Gaussian measurements or a generic claim that non-Gaussian operations suffice. The constructed coherent POVM is one successful family; optimal Gaussian-helper capacity is not established here.
 
 Vacuum auxiliary inputs, memoryless loss, accurate known fractions, unconditional transmission, and receiver-only classical assistance are consequential premises. Thermal background noise, a drifting phase reference, finite classical bandwidth, finite-block fidelity, and physical detector synthesis require separate analyses. No claim about their behavior is needed for the stated capacity theorem.
