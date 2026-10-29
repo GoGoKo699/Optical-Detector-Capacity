@@ -226,9 +226,11 @@ At fixed additive tolerances,
 
 This is a sufficient preparation budget for the specified communication task.
 It is compatible with the stronger reference requirement for approximating a
-prescribed gate at a separately imposed uniform error. It does not establish a
-reference-energy lower bound for capacity, an exact catalyst, sustained reuse,
-or an efficient physical synthesis of the conserving control.
+prescribed gate at a separately imposed uniform error. The
+[first-moment converse](reference_mean_bounds.md) separately proves matching
+linear mean-stock necessity in the energy-driven local-conservation model.
+An exact catalyst, sustained reuse, and efficient physical synthesis of the
+conserving control require additional analysis.
 
 ## Mean energy exchanged in the actual control
 

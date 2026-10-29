@@ -196,6 +196,11 @@ does not lower-bound arbitrary measurements that reproduce the same classical
 record, implementations tested only on one average input, or all detectors that
 attain a given communication rate.
 
+The [first-moment capacity converse](reference_mean_bounds.md) addresses that
+different optimization under separate local conservation. It proves linear
+mean-stock necessity for a bounded rate gap in the energy-driven regime,
+independently of this prescribed-gate theorem.
+
 ## Optical rate with a finite prepared reference
 
 Choose the cutoff $`d`$ at energy $`L=\min\{E,1/b\}`$ and tolerance

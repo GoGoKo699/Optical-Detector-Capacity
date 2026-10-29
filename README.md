@@ -28,7 +28,21 @@ The [resource account](science/detector_resources.md) makes the cutoff and accur
 
 With a helper record budget $`r_c`$, the [rate tradeoff](science/detector_resources.md) is $`Q(E,r_c)=\min\{r_c,\log_2L\}+O_a(1)`$ for fixed received fraction $`a`$, $`a>b`$, and $`L\ge1`$. A [finite-reference realization](science/finite_reference.md) supplies the prescribed Fourier gate using number-conserving control and a finite sine reference. Its initial reference mean has order $`q/\sqrt\varepsilon`$ for small uniform gate error $`\varepsilon`$ in half diamond distance; this gate-level resource bound does not determine the minimum reference needed by every capacity-achieving measurement.
 
-For communication, [direct reference-entropy accounting](science/direct_reference.md) gives a sharper sufficient stock: fresh mean photons $`O(L+1)`$ retain any fixed additive rate guarantee of the construction. The [local-reference converse](science/reference_width_bounds.md) bounds every code when helper effects preserve each mode's total number. In the energy-driven regime $`E=L`$, a bounded additive gap requires reference variance $`\Omega(E^2)`$ and number-support width $`\Omega(E)`$. More generally, width $`K=E^\alpha`$ gives leading rate coefficient $`\min\{1,\max\{1/2,\alpha\}\}`$ in the stated local model. This is a variance/support statement; a general lower bound on mean reference energy remains open.
+For communication, [direct reference-entropy accounting](science/direct_reference.md) gives a sharper sufficient stock: fresh mean photons $`O(L+1)`$ retain any fixed additive rate guarantee of the construction. The local-reference converses bound every code when helper effects preserve each mode's total number. In the energy-driven regime $`E=L`$, a bounded additive gap requires average initial reference mean $`\Omega(E)`$, as well as variance $`\Omega(E^2)`$ and number-support width $`\Omega(E)`$. The [mean-energy proof](science/reference_mean_bounds.md) includes references with infinite variance.
+
+With mean reference budget $`M`$ and unrestricted helper records, the complete local profile is
+
+```math
+Q_{\rm loc}^{\rm mean}(E,M)
+=\min\!\left\{\log_2E,
+\max\!\left\{\tfrac12\log_2E,\log_2(M+1)\right\}\right\}+O_a(1).
+```
+
+This [mean-energy profile](science/reference_mean_bounds.md) and the analogous
+[support-width profile](science/reference_width_bounds.md) hold in the stated
+energy-driven uniform domain. Linear initial reference mean is sufficient and
+necessary for a bounded rate gap within the separate-local-conservation model.
+Preparation work, reset, and coherent reuse require different resource accounts.
 
 ## Finite-energy separation
 
@@ -57,6 +71,7 @@ Start with the [physical model and claims](science/model.md), then follow the [c
 | Can a finite phase reference implement this detector? | [Conserving realization and reference budget](science/finite_reference.md) |
 | What reference stock suffices directly for communication? | [Discarded-reference entropy bound](science/direct_reference.md) |
 | What local reference fluctuations are unavoidable? | [All-code variance and support-width bound](science/reference_width_bounds.md) |
+| What is the capacity at a given mean reference energy? | [All-code mean-stock bound and matched profile](science/reference_mean_bounds.md) |
 | What is uniform as energy and inaccessible loss vary? | [Uniform laws](science/uniform_laws.md) |
 | What changes physically, and what remains outside the result? | [Interpretation](science/interpretation.md) |
 | Which ingredients and comparisons are inherited? | [Related work](references/RELATED_WORK.md) |
