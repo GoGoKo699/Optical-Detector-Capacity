@@ -66,6 +66,17 @@
         "R±[2]>0.329",
         "R±[2]−Qcnt[2]>0.011"
       ]
+    },
+    {
+      "path": "science/counting_bounds.md",
+      "index": 16,
+      "source_sha256": "eb850e7905f743ffdb5d689f2ac5d605de21365814f0af43de0ac20797935662",
+      "expected_text": "EVar(J|K)≤a(a+c)cE.",
+      "required_text": [
+        "Var(J|K)",
+        "a(a+c)",
+        "cE"
+      ]
     }
   ]
 }

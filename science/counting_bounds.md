@@ -33,7 +33,7 @@ When $`c>0`$, use the residual $`J-aK/c`$. Its conditional mean given $`N=n`$ is
 Hence the residual has finite second moment even when $`\mathbb EN^2=\infty`$. Conditional expectation minimizes mean-square error, so
 
 ```math
-\mathbb E\operatorname{Var}(J|K)
+\mathbb E\mathrm{Var}(J|K)
 \le\frac{a(a+c)}c E.
 ```
 
