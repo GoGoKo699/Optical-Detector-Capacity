@@ -33,7 +33,7 @@ When $`c>0`$, use the residual $`J-aK/c`$. Its conditional mean given $`N=n`$ is
 Hence the residual has finite second moment even when $`\mathbb EN^2=\infty`$. Conditional expectation minimizes mean-square error, so
 
 ```math
-\mathbb E\operatorname{Var}(J|K)
+\mathbb E\mathrm{Var}(J|K)
 \le\frac{a(a+c)}c E.
 ```
 
@@ -63,7 +63,7 @@ This exact identity is useful because the first entropy difference is bounded in
 
 ### Thinning cannot reduce entropy by more than its log retention
 
-For $`0<t\le1`$, the thinning transition matrix is $`P_{mn}=\binom nm t^m(1-t)^{n-m}`$. Its column sums are one and each row sums to $`1/t`$. Thus $`tP_{mn}`$, as a function of $`n`$ at fixed $`m`$, is a probability distribution. Nonnegativity of the relative entropy of the posterior $`p(n|m)`$ to that distribution gives, after averaging over $`m`$,
+For $`0\lt t\le1`$, the thinning transition matrix is $`P_{mn}=\binom nm t^m(1-t)^{n-m}`$. Its column sums are one and each row sums to $`1/t`$. Thus $`tP_{mn}`$, as a function of $`n`$ at fixed $`m`$, is a probability distribution. Nonnegativity of the relative entropy of the posterior $`p(n|m)`$ to that distribution gives, after averaging over $`m`$,
 
 ```math
 H(T_tN)-H(N)\ge\log_2t.
@@ -127,7 +127,7 @@ Set $`U_b=\infty`$ at $`b=0`$. Together with the collective benchmark, the avail
 
 ## Thermal average input supplies the lower bound
 
-Choose any mean $`0<X\le E`$ and a geometric input photon distribution, corresponding to a thermal average state. The collected count is geometric with mean $`cX`$. Conditional on $`K=k`$, the receiver count has the negative-binomial distribution equal to the sum of $`r=k+1`$ independent geometric variables, each of mean
+Choose any mean $`0\lt X\le E`$ and a geometric input photon distribution, corresponding to a thermal average state. The collected count is geometric with mean $`cX`$. Conditional on $`K=k`$, the receiver count has the negative-binomial distribution equal to the sum of $`r=k+1`$ independent geometric variables, each of mean
 
 ```math
 \mu=\frac{aX}{1+cX},\qquad w=\mu(1+\mu).
@@ -155,7 +155,7 @@ The first inequality uses the same sine bound and extends the integral to the li
 H(J|K=k)\ge\frac12\log_2[(k+1)w]+\log_2(4/\pi).
 ```
 
-For a geometric $`K`$ with maximum point probability $`p=1/(1+cX)`$, $`\Pr(K+1<t)\le pt`$. Integrating the lower tail of $`\ln(K+1)`$ yields
+For a geometric $`K`$ with maximum point probability $`p=1/(1+cX)`$, $`\Pr(K+1\lt t)\le pt`$. Integrating the lower tail of $`\ln(K+1)`$ yields
 
 ```math
 \mathbb E\log_2(K+1)\ge\log_2(1+cX)-\log_2e.

@@ -1,6 +1,12 @@
-# Learning-route verification
+# Learning-route verification record
 
 [Home](../README.md) · [Learning entrance](../learning/README.md) · [Scientific verification](README.md)
+
+This is the retained 28 October source and presentation record. Its blocked
+browser result is historical. Revision-specific checks for subsequent changes,
+including actual hosted captures and visual review, are retained in their
+pull-request receipts and workflow artifacts. A later successful access
+observation does not change what was observed in this earlier check.
 
 ## Source boundary
 

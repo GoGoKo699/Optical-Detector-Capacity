@@ -4,7 +4,7 @@
 
 ## Uniform domain
 
-Fix $`0<a<1`$, set $`b_0=\frac12\min\{a,1-a\}`$, and allow $`E\ge1`$, $`0\le b\le b_0`$. Then $`a>b`$ and $`c\ge c_0=(1-a)/2>0`$. Define
+Fix $`0\lt a\lt 1`$, set $`b_0=\frac12\min\{a,1-a\}`$, and allow $`E\ge1`$, $`0\le b\le b_0`$. Then $`a>b`$ and $`c\ge c_0=(1-a)/2>0`$. Define
 
 ```math
 L=\min\{E,1/b\},\qquad 1/0=\infty.
@@ -73,9 +73,9 @@ Q_{\rm coll}(E)\simeq11.2805257151.
 The [verification program](../verification/verify.py) also proves the wider rational enclosures
 
 ```math
-10.51<R_1(E)<10.52,\qquad
-Q_{\rm cnt}(E)<7.90,\qquad
-11.28<Q_{\rm coll}(E)<11.29.
+10.51\lt R_1(E)\lt 10.52,\qquad
+Q_{\rm cnt}(E)\lt 7.90,\qquad
+11.28\lt Q_{\rm coll}(E)\lt 11.29.
 ```
 
 It evaluates logarithms using range reduction and the rational series
@@ -92,6 +92,6 @@ on $`1\le x\le2`$. Forty-eight terms suffice. The counting certificate uses $`\p
 
 At $`E=0`$ all capacities vanish. At $`a\le b`$, joint antidegradability makes them zero even with collective measurements. At $`b=0`$, the effective scale is $`L=E`$ and $`Q_{\rm coll}=g(aE)`$.
 
-At $`c=0`$, there is no collected output: all three classes reduce to ordinary pure-loss communication, with capacity $`\max\{g(aE)-g(bE),0\}`$. The half-logarithmic law does not apply to that boundary. At $`a=1`$, the identity channel has capacity $`g(E)`$ for every class; this is excluded by the fixed-$`0<a<1`$ crossover domain.
+At $`c=0`$, there is no collected output: all three classes reduce to ordinary pure-loss communication, with capacity $`\max\{g(aE)-g(bE),0\}`$. The half-logarithmic law does not apply to that boundary. At $`a=1`$, the identity channel has capacity $`g(E)`$ for every class; this is excluded by the fixed-$`0\lt a\lt 1`$ crossover domain.
 
 Neither a finite-energy exact counting maximizer nor an exact value for $`Q_1`$ is asserted. Those are different optimization questions from the established detector-class laws.

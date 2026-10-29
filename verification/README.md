@@ -42,16 +42,28 @@ The runner refuses to overwrite the expected record or an existing output. Do no
 
 The matrix cases test finite input cutoffs, not a transmitted quantum code or a laboratory detector. Floating-point identities use the stated tolerances in the script. The grid does not establish optimality over all inputs, large-energy asymptotics, or an implementation complexity bound.
 
+## Hosted mathematics
+
+The read-only `Check hosted mathematics` workflow inventories the pinned source
+pages listed in [the capture scope](hosted/pages.txt), then compares every inline,
+table and display expression with its actual GitHub rendering at wide and narrow
+viewports. Source-bound headline contracts supplement the full structural check.
+Its retained reports, HTML and screenshots support visual review; a passing
+automated comparison alone does not establish legibility or scientific validity.
+Revision-specific observations and artifact identities belong in the relevant
+pull-request receipt. The collector and checker are mirrored from the canonical
+Merlin–Arthur tooling without changing their comparison rules.
+
 ## Rational finite-energy certificate
 
 At receiver fraction $`1/4`$, inaccessible fraction $`1/10000`$, and mean signal occupation $`10^6`$, the script proves
 
 ```math
-Q_{\rm cnt}<7.90,
+Q_{\rm cnt}\lt 7.90,
 
 Q_1>10.51,
 
-11.28<Q_{\rm coll}<11.29.
+11.28\lt Q_{\rm coll}\lt 11.29.
 ```
 
 Every logarithm in this certificate is enclosed using rational range reduction and 48 terms of

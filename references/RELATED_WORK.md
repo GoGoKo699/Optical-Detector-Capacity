@@ -38,6 +38,32 @@ These apparatus constructions and general energy theorems are inherited. The [fi
 
 The [direct capacity argument](../science/direct_reference.md) uses the same supplied sine state and conserving lift. Its entropy bound for mixtures of translated references is proved locally using a Dirichlet Laplacian and geometric maximum entropy. It gives linear sufficient reference stock at fixed additive communication-rate loss. The [local-reference ceiling](../science/reference_width_bounds.md) instead follows from conserved-number refinement, conditional receiver entropy, and a multinomial estimator. The [mean-stock converse](../science/reference_mean_bounds.md) uses the residual's first absolute moment and matches the initial mean-energy order, including infinite-variance references. Its dither identity and Laplace entropy bound are standard: Rioul, [Variations on a Theme by Massey](https://arxiv.org/abs/2102.04200v4), IEEE Transactions on Information Theory **68**, 2813–2828 (2022), Theorems 1 and 4. The support-width and mean-stock profiles concern the separate per-mode conservation model and energy-driven regime. They are capacity consequences of the stated access contract, not consequences of a gate-level energy lower bound or new general entropy inequalities. No exhaustive priority certification is asserted.
 
+### Finite reference frames and phase-noise communication
+
+Bartlett, Rudolph, Spekkens, and Turner,
+[Quantum communication using a bounded-size quantum reference frame](https://arxiv.org/abs/0812.5040v2),
+New Journal of Physics **11**, 063013 (2009), Eqs. (1)–(3) and Sections III–IV,
+derive the effective noise produced by a finite reference token and explain
+relational decoding. Their phase-reference example already supplies the finite
+token/dephasing mechanism. The present reference construction uses that established
+physical principle; the lossy-helper all-code mean-stock profile is a different
+capacity optimization.
+
+Zhuang, [Quantum-enabled communication without a phase reference](https://arxiv.org/abs/2010.11974v2),
+Physical Review Letters **126**, 060502 (2021), Eqs. (1)–(5), treats a phase
+shared across a block of modes and obtains quantum-capacity results controlled
+by the phase-noise correlation length. Fanizza, Rosati, Skotiniotis, Calsamiglia,
+and Giovannetti,
+[Squeezing-enhanced communication without a phase reference](https://arxiv.org/abs/2006.06522v4),
+Quantum **5**, 608 (2021), Section 6 and Appendix C, explicitly account for a
+transmitted reference pulse's energy in classical/Gaussian communication. These
+are substantive precedents for reference-limited communication and energy
+accounting. Neither prices the initial mean of an environmental-output detector
+reference under the separate per-mode invariance contract used here. Collective
+relational processing is a different resource from those separately invariant
+detectors; the local mean-stock necessity is not a universal reference-energy
+requirement for optical communication.
+
 ### Memarzadeh, Cafaro, and Mancini (2011)
 
 [Quantum information reclaiming after amplitude damping](https://arxiv.org/pdf/1004.0497), Journal of Physics A **44**, 045304. Section 4.2, Eqs. (41)–(42) and (52)–(54), mixes zero- and two-photon environmental outcomes at equal magnitude and leaves the one-photon outcome unchanged. It improves corrected entanglement fidelity in the qutrit loss model with full environmental access. That detector and qualitative qubit/qutrit contrast precede the [finite-cutoff example](../science/qubit_optical_bridge.md). The latter comparison uses inaccessible residual loss and an achievable unconditional rate exceeding a converse for all counting codes. The primary loss model and relevant equations were inspected; this targeted comparison does not imply exhaustive priority certification.
@@ -62,7 +88,7 @@ Wang and Jiang, [Passive environment-assisted quantum communication with GKP sta
 
 The detector-capacity account combines residual-variance and thinning converses uniform over all finite-mean photon distributions, their match by a negative-binomial counting construction, a one-mode purity bound, and the resulting uniform energy/loss crossover and finite-energy capacity separation. Its structured detector application uses the inherited phase designs above and selects a single setting. The [two-photon example](../science/qubit_optical_bridge.md) supplies a certified finite-cutoff comparison with optimized counting. The elementary entropy inequalities are derived locally as tools, without a separate priority claim for those inequalities. The collective capacity, general assistance methodology, and phase-design constructions retain their source attribution.
 
-The principal consequence distinguishes coherence *within* one collected mode from coherent processing *across* many modes. It does not assert that Gaussian detectors are optimal, that every non-Gaussian detector helps, or that the exhibited finite POVM has an efficient implementation.
+The principal consequence distinguishes coherence *within* one collected mode from coherent processing *across* many modes. The [mean-reference profile](../science/reference_mean_bounds.md) strengthens that story in the separate-local-conservation architecture: an optical first-moment residual bound matches the direct finite-reference construction, including arbitrary mean-constrained tails. Its linear initial-stock requirement concerns a bounded additive rate gap, rather than leading coefficient one alone. It does not assert that Gaussian detectors are optimal, that every non-Gaussian detector helps, or that the exhibited finite POVM has an efficient implementation.
 
 ## Coverage of the comparison
 
