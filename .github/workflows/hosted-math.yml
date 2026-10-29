@@ -14,7 +14,6 @@ jobs:
     timeout-minutes: 30
     env:
       SOURCE_REVISION: ${{ github.event.pull_request.head.sha || github.sha }}
-      PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/hosted-browser
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
