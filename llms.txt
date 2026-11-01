@@ -71,3 +71,13 @@ codes. The logical reference R tests transmission; the apparatus reference W
 supplies coherence. The chapter supplies foundations, not the detector or
 reference-resource theorems. Written proofs and cited coding results establish
 universal statements; finite tests verify their specified finite ingredients.
+
+Sister-project route:
+- https://github.com/GoGoKo699/Partial-Monitoring-Capacity: current scientific
+  entrance for the inherited collective benchmark and the separate qubit
+  predetermined-product optimum versus unrestricted collective measurements.
+- https://github.com/GoGoKo699/Partial-Monitoring-Capacity/blob/main/learning/README.md:
+  the same selected Preskill chapter supports that project's own 30 milestones.
+- science/qubit_optical_bridge.md: explicit comparison at input cutoffs one and
+  two; the full optical mean-energy theorem has its own larger input class.
+Each repository provides its own model, proof route, and learning entrance.

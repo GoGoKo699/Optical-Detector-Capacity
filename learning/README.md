@@ -12,6 +12,8 @@ Begin with the bridge's [source map and notation](PRESKILL_BRIDGE.md#sources), t
 
 Preskill supplies the entropy and coding foundations. The bridge adds the optical calculation, detector mechanisms, finite reference, and local-conservation arguments. The [science pages](../science/README.md) contain the exact statements and proofs. Primary papers remain necessary for assistance, energy-constrained coding, phase designs, and reference implementations; they are not additional educational anchors.
 
+The sister project's [learning entrance](https://github.com/GoGoKo699/Partial-Monitoring-Capacity/blob/main/learning/README.md) uses the same selected Preskill chapter for its own thirty-milestone map. Its qubit product-measurement optimum leads naturally to this project's [two-photon bridge](../science/qubit_optical_bridge.md); its collective optical capacity supplies the benchmark for the detector comparison. The maps follow different scientific questions and can each be read on their own.
+
 ## Reading routes
 
 For the physical story, follow the bridge from [optical systems](PRESKILL_BRIDGE.md#optics) through the [detector mechanism](PRESKILL_BRIDGE.md#coherence), [finite reference](PRESKILL_BRIDGE.md#phase-reference), and [capacity profile](PRESKILL_BRIDGE.md#local-reference). Use the corresponding milestones to connect each step.

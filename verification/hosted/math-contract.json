@@ -77,6 +77,16 @@
         "a(a+c)",
         "cE"
       ]
+    },
+    {
+      "path": "science/reference_mean_bounds.md",
+      "index": 60,
+      "source_sha256": "35f014037b98b7d3ca8d8d7e88d22293767ab7f37c5cc3305e219374e6b75461",
+      "expected_text": "M≥ca[2−C0E2e−(a(a+c)E/c)1/2−14].",
+      "required_text": [
+        "M≥",
+        "(a(a+c)E/c)1/2"
+      ]
     }
   ]
 }

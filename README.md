@@ -69,6 +69,19 @@ Start with the [physical model and claims](science/model.md), then follow the [c
 
 The collective optical capacity is inherited from the [partial-monitoring analysis](https://github.com/GoGoKo699/Partial-Monitoring-Capacity/tree/447726d37438de67b4ef2e1a9406d2c44d6a394f). The detector-class comparison, its uniform counting converse, and the constant-gap single-mode construction are the subject here.
 
+## Sister project: Partial Monitoring Capacity
+
+[Partial Monitoring Capacity](https://github.com/GoGoKo699/Partial-Monitoring-Capacity) asks how much communication can be recovered by measuring a partially accessible environment. Its collective-capacity benchmark and its qubit measurement optimum provide two starting points for the optical detector question here.
+
+| Account | Question and contribution |
+|---|---|
+| Partial Monitoring Capacity | Exact partially monitored capacities, including the optimum over predetermined product helper measurements in the qubit model and its strict separation from unrestricted collective measurements. |
+| Optical Detector Capacity | Counting versus coherent individual-mode measurements in the full optical model, the first failure of qubit counting optimality at a two-photon cutoff, and the stated detector-resource profiles. |
+
+The [qubit-to-optical bridge](science/qubit_optical_bridge.md) makes the comparison concrete. Counting optimality with at most one input excitation does not extend to two excitations or to unrestricted optical inputs. Coherence among photon numbers within one mode and joint measurements across channel uses are different operations; both projects retain arbitrary sender and receiver block codes. The inherited collective benchmark is credited to Partial Monitoring, while the optical detector and reference-budget results have their proofs here.
+
+Each repository supplies its own model, scientific route, and thirty-milestone learning map. The sister links connect the results without adding a prerequisite reading assignment.
+
 ## Learn the project
 
 The single educational anchor is **John Preskill, *Quantum Shannon Theory*, Chapter 10, arXiv:1604.07450v5** (updated June 2025; posted 8 July 2025). The [learning entrance](learning/README.md) gives a focused route rather than a whole-chapter assignment.

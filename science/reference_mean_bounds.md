@@ -207,7 +207,7 @@ If an attainable rate is at least $`\log_2E-C_0`$, the finite bound implies
 
 ```math
 M\ge\frac ca\left[
-\frac{2^{-C_0}E}{2e}-\sqrt{\frac{a(a+c)}cE}-\frac14\right].
+\frac{2^{-C_0}E}{2e}-\left(a(a+c)E/c\right)^{1/2}-\frac14\right].
 ```
 
 Thus a bounded additive gap to the full logarithmic rate in the stated domain
