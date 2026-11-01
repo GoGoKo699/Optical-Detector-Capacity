@@ -53,7 +53,12 @@ profiles does not establish a joint record-and-reference frontier.
 
 ## Attribution and verification
 
-The collective optical capacity comes from Partial Monitoring. Assistance,
+The collective optical capacity comes from the sister project
+[Partial Monitoring Capacity](https://github.com/GoGoKo699/Partial-Monitoring-Capacity).
+Its qubit counting optimum and strict product-versus-collective gap concern a
+different input space and measurement comparison. The
+[qubit-to-optical bridge](qubit_optical_bridge.md) explains the boundary before
+the full optical rate comparison is made. Assistance,
 coding, phase designs, and the conserving reference construction retain their
 [primary-source attribution](../references/RELATED_WORK.md). The
 [interpretation](interpretation.md) explains the physical scope and remaining
