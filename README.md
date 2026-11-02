@@ -69,8 +69,6 @@ Start with the [physical model and claims](science/model.md), then follow the [c
 | What remains outside the comparison, and which results are inherited? | [Interpretation](science/interpretation.md) and [related work](references/RELATED_WORK.md) |
 | How are the finite calculations reproduced? | [Verification](verification/README.md) |
 
-The collective optical capacity is inherited from the [partial-monitoring analysis](https://github.com/GoGoKo699/Partial-Monitoring-Capacity/tree/447726d37438de67b4ef2e1a9406d2c44d6a394f). The detector-class comparison, its uniform counting converse, and the constant-gap single-mode construction are the subject here.
-
 ## Sister project: Partial Monitoring Capacity
 
 [Partial Monitoring Capacity](https://github.com/GoGoKo699/Partial-Monitoring-Capacity) asks how much communication can be recovered by measuring a partially accessible environment. Its collective-capacity benchmark and its qubit measurement optimum provide two starting points for the optical detector question here.
@@ -102,7 +100,7 @@ python -m unittest discover -s verification -p "test_*.py" -v
 python verification/qutrit_certificate.py
 ```
 
-The runner checks finite channel identities, complete finite POVMs, entropy inequalities, and the rational rate certificate. The [learning checks](learning/README.md#reproduce-the-learning-checks) validate the milestone structure, links, and worked examples. Written proofs establish the arbitrary-input and asymptotic statements. [Verification scope](verification/README.md) distinguishes these roles. The [review record](verification/FURNISHING_CHECK.md) states performed checks and remaining display-verification limits.
+The runner checks finite channel identities, complete finite POVMs, entropy inequalities, and the rational rate certificate. The [learning checks](learning/README.md#reproduce-the-learning-checks) validate the milestone structure, links, and worked examples. Written proofs establish the arbitrary-input and asymptotic statements. [Verification scope](verification/README.md) distinguishes these roles. The [historical learning-route review](verification/FURNISHING_CHECK.md) retains the 28 October checks and display-access limits; subsequent validation is recorded in the merged pull requests.
 
 ## Scope
 
