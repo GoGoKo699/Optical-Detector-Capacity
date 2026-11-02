@@ -1,5 +1,7 @@
 # Optical Detector Capacity
 
+> **Sister project:** [Partial Monitoring Capacity](https://github.com/GoGoKo699/Partial-Monitoring-Capacity) supplies the collective optical capacity benchmark and establishes the qubit comparison between predetermined individual and collective measurements. This repository studies optical detector classes and finite phase-reference resources.
+
 **Can reading lost light one mode at a time recover the leading quantum communication rate?** Yes, but photon counting and coherent measurements have different limits.
 
 A vacuum optical splitter sends a fraction $`a`$ of the signal to the receiver, a fraction $`b`$ to an inaccessible output, and $`c=1-a-b`$ to a helper. The helper measures its output and sends only a classical record to the receiver. The signal budget is $`E`$ mean photons per original mode. Both detector classes permit arbitrary sender and receiver block codes.
