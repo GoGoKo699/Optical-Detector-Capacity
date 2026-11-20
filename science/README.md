@@ -4,8 +4,10 @@
 
 A detector produces a classical record and determines which photon-number
 coherences survive. The first question is how that choice changes communication
-capacity. The second is how much prepared phase reference is needed to obtain
-the coherent detector's advantage. The [model](model.md) defines the base
+capacity. The next question is how much of that advantage a detector can recover by
+jointly measuring a finite block while preserving its total photon number.
+A separate extension quantifies the prepared phase reference needed for
+coherent individual-mode detection. The [model](model.md) defines the base
 comparison; each resource extension states its additional operation and budget
 constraints.
 
@@ -26,6 +28,15 @@ The cutoff in an achievable construction is not imposed on competing codes.
 The two-photon example explicitly adds its own per-mode cutoff; it is not a
 counting upper bound under the unrestricted mean-energy-only model.
 
+## From one mode to number-preserving blocks
+
+The [detector-width law](detector_width.md) divides the helper's measurement
+into predetermined blocks of at most $`m`$ modes. The converse separates the
+aggregate received photon count from the state within its number sector.
+The matching construction uses a predetermined Fourier measurement inside
+each collected-number sector. The law is uniform in block width and gives the
+logarithmic width required for a bounded gap to the collective benchmark.
+
 ## From a coherent detector to a charged reference budget
 
 The finite apparatus and its discarded systems belong to the channel. Keeping
@@ -42,8 +53,8 @@ allowed protocol.
 
 The last two converses require each effective helper effect to commute with
 every local total $`N_{D_i}+N_{W_i}`$. They permit arbitrary endpoint codes and
-initial references independent of the signal. Global-total-only invariance is
-a broader class. The mean-budget proof covers infinite reference variance;
+initial references independent of the signal. The [detector-width law](detector_width.md)
+uses block-total invariance on the collected signal modes. The mean-budget proof covers infinite reference variance;
 variance alone would not establish that mean-energy conclusion.
 
 The mean and width profiles use the energy-driven domain $`E\ge1`$,

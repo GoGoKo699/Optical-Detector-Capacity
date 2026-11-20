@@ -12,6 +12,16 @@ inherited from Partial-Monitoring-Capacity. Coherence across photon numbers
 within one collected mode supplies the full leading rate. Photon counting is
 itself non-Gaussian, so this is not a Gaussian-versus-non-Gaussian theorem.
 
+The detector-width law concerns disjoint predetermined helper blocks of at most
+m modes. The effects preserve each block's total photon number, with no exchange
+with a prepared optical phase reference. General operations within each number
+sector and arbitrary endpoint block codes are allowed. In the same uniform
+domain, Q_{<=m}(E,b)=(1-1/(2m)) log2 L+O_a(1), with a remainder uniform in m.
+Two modes give leading coefficient 3/4. Width of order log2 L suffices for a
+bounded gap to collective capacity, and a fixed gap requires at least that
+order of width. A single fixed passive mixer followed by occupation counting
+has the counting capacity.
+
 The mean-reference extension prices average initial apparatus photons M. Under
 separate local invariance of every effective helper effect with each
 N_Di+N_Wi, and initial apparatus independent of the encoded signal,
@@ -19,9 +29,10 @@ Qloc_mean(E,M)=min(log2 E,max(0.5 log2 E,log2(M+1)))+O_a(1).
 Its domain is fixed 0<a<1, E>=1, M>=0, 0<=b<=min(a,1-a)/2, bE<=1, with
 unrestricted classical records. The converse includes arbitrary endpoint codes
 and infinite-variance references. Fresh sine references attain the lower order.
-A bounded additive rate gap requires and permits linear mean stock. Global-total-
-only invariance, correlated coherent reuse, preparation work, and reset are
-separate questions; the profile is not a joint record/reference frontier.
+A bounded additive rate gap requires and permits linear mean stock. The block
+width law and the local mean-stock profile use different operation classes.
+Correlated coherent reuse, preparation work, reset, and joint record/reference
+tradeoffs remain separate questions.
 
 Scientific route:
 - science/model.md: base access contract and detector-class definitions.
@@ -32,6 +43,8 @@ Scientific route:
 - science/coherent_measurements.md: phase purity identity, inherited quadratic
   design, selected Fourier setting with O(d) outcomes, and constant collective gap.
 - science/uniform_laws.md: exact uniform domain and certified optical comparison.
+- science/detector_width.md: uniform number-preserving block-width capacity law,
+  sector Fourier measurement, and passive-mixer comparison.
 - science/qubit_optical_bridge.md: certified separation under a two-photon cutoff.
 - science/detector_resources.md: finite cutoff, control-error bound, complete record
   accounting, and the separate classical-record capacity tradeoff.
@@ -61,7 +74,8 @@ Learning route:
 - learning/PRESKILL_BRIDGE.md: John Preskill, Quantum Shannon Theory, Chapter 10,
   arXiv:1604.07450v5 (updated June 2025, posted 8 July 2025), is the single
   educational anchor. The bridge covers notation, a worked counting channel,
-  optical entropy, finite reference, and local mean-resource capacity.
+  optical entropy, detector block width, finite reference, and local
+  mean-resource capacity.
 - verification/check_learning.py and verification/test_learning.py: source pin,
   navigation, milestone structure, and worked-example checks.
 

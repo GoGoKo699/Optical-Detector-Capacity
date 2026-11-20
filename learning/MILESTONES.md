@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Learning entrance](README.md) · [Preskill bridge](PRESKILL_BRIDGE.md) · [Scientific route](../science/README.md)
 
-The map has **14 background/preliminaries milestones** and **16 narrative/innovation milestones**. The background joins optical carriers, classical records, entropy, and coding into one resource model. The narrative develops the detector comparison, then follows the finite apparatus through a matched mean-reference capacity profile. The allocation follows that scientific structure, not a particular reader's preparation.
+The map has **14 background/preliminaries milestones** and **16 narrative/innovation milestones**. The background joins optical carriers, classical records, entropy, and coding into one resource model. The narrative develops the detector comparison, then follows two resource paths through detector block width and prepared reference photons. The allocation follows that scientific structure, not a particular reader's preparation.
 
 Every dependency points to an earlier milestone. The targets cover the connected argument, not every technical lemma. Preskill section references use **arXiv:1604.07450v5**, updated June 2025 and posted 8 July 2025. The [source map](PRESKILL_BRIDGE.md#sources) distinguishes chapter foundations from optical and research arguments supplied locally.
 
@@ -406,17 +406,17 @@ Every dependency points to an earlier milestone. The targets cover the connected
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How close is individual-mode detection to collective assistance?
+**Central question:** How close are different helper measurements to collective assistance?
 
-**Understanding target:** Compare the coherent lower bound with the inherited collective formula, obtain the log2(e) finite-energy gap, and join the counting and coherent laws in the fixed-a uniform domain.
+**Understanding target:** Compare the coherent individual-mode lower bound with the inherited collective formula and obtain the log2(e) finite-energy gap. Use the counting limit and the fixed-number sector dimension to explain the two-mode point of the block-width law.
 
 **Dependencies:** [M16](#m16), [M20](#m20), [M23](#m23).
 
 **Story role:** Assemble the main detector-class theorem.
 
-**Conceptual connection:** A bounded additive gap gives the same leading rate without proving an exact individual-mode optimum; fixed-loss saturation is a different limit.
+**Conceptual connection:** Two-mode joint detection that preserves total photon number gives $`\frac34\log_2 L+O_a(1)`$. The unrestricted coherent individual-mode detector has the full leading logarithm. Each asymptotic comparison uses the same energy–loss scale $`L`$.
 
-**Sources:** Preskill §§10.7.1; [project bridge](PRESKILL_BRIDGE.md#synthesis); [scientific accounts](../science/coherent_measurements.md), [uniform laws](../science/uniform_laws.md).
+**Sources:** Preskill §§10.2.2, 10.7.1, 10.7.3, [project bridge](PRESKILL_BRIDGE.md#detector-width), [coherent detector](../science/coherent_measurements.md), [uniform laws](../science/uniform_laws.md), and [detector-width proof](../science/detector_width.md).
 
 <a id="m25"></a>
 ### M25 — Two finite separations and their input classes
@@ -499,23 +499,23 @@ Every dependency points to an earlier milestone. The targets cover the connected
 
 **Story role:** Supply converses for every allowed code rather than only the constructed detector.
 
-**Conceptual connection:** Large variance at fixed mean defeats a variance-to-mean inference; the mean converse instead permits infinite variance directly. Global conservation alone is a broader operation class.
+**Conceptual connection:** The separately conserved local totals give the reference-stock converse even at infinite reference variance. A detector that conserves one total across a block can also use coherence between different occupations within that block.
 
 **Sources:** Preskill §§10.1.1–10.1.2; 10.2.2; 10.7.1; [project bridge](PRESKILL_BRIDGE.md#local-reference); [scientific accounts](../science/reference_width_bounds.md), [mean-energy converse](../science/reference_mean_bounds.md).
 
 <a id="m30"></a>
-### M30 — The complete detector and mean-reference capacity story
+### M30 — Detector block width and mean-reference resources
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How do detector choice and a charged phase-reference budget determine the rate?
+**Central question:** What can a larger detector block or a larger local phase reference buy?
 
-**Understanding target:** Combine counting, the direct finite-reference construction, and the all-code mean converse into the additive capacity profile; state its energy-driven domain, bounded-gap requirement, attribution, and remaining implementation limits.
+**Understanding target:** Reconstruct the matched mean-reference profile in its energy-driven domain. Then use the uniform detector-width law to explain when blockwise number-preserving detection has a bounded gap to the collective benchmark. State the measurement contract for each comparison.
 
 **Dependencies:** [M16](#m16), [M20](#m20), [M24](#m24), [M25](#m25), [M26](#m26), [M28](#m28), [M29](#m29).
 
 **Story role:** Finish with the connected scientific contribution and its operational boundaries.
 
-**Conceptual connection:** Linear mean reference stock is sufficient and necessary for a bounded gap under separate local invariance; neither the profile nor the record theorem determines a joint resource frontier or preparation work.
+**Conceptual connection:** Under separate local invariance the bounded-gap scale is linear in the signal mean for the prepared reference stock. Under blockwise total-number conservation with no reference exchange, the bounded-gap width scale is $`\log_2 L`$. These statements concern two specified detector classes.
 
-**Sources:** Preskill §§10.10; [project bridge](PRESKILL_BRIDGE.md#synthesis); [scientific accounts](../science/reference_mean_bounds.md), [proof route](../science/README.md).
+**Sources:** Preskill §§10.10, [project bridge](PRESKILL_BRIDGE.md#synthesis), [mean-reference profile](../science/reference_mean_bounds.md), and [detector-width law](../science/detector_width.md).

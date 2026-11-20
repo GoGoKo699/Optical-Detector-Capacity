@@ -37,9 +37,9 @@ reset are distinct resources. The mean-stock and width profiles use unrestricted
 classical records; the [record-budget result](detector_resources.md) is a
 separate optimization.
 
-## Three detector classes
+## Detector classes
 
-**Counting, $`Q_{\rm cnt}`$.** Each collected mode is measured in its number basis. The receiver can retain and process the complete vector of counts. Any stochastic processing, coarse graining, or diagonal POVM on the product number basis is dominated by this exact record. A coherent optical transformation before counting changes the detector class and is not included in this benchmark.
+**Counting, $`Q_{\rm cnt}`$.** Each collected mode is measured in its number basis. The receiver can retain and process the complete vector of counts. Any stochastic processing, coarse graining, or diagonal POVM on the product number basis is dominated by this exact record. The product occupation basis is fixed by the original collected modes.
 
 **Individual-mode processing, $`Q_1`$.** Each mode has an arbitrary POVM chosen in advance. The choice may vary with the use, the known channel parameters, energy budget, and desired accuracy; time sharing is allowed. No joint quantum operation or persistent quantum memory connects collected modes. The sender and receiver still use arbitrary block codes. An exact single-letter formula for this optimized class is not asserted or needed.
 
@@ -50,6 +50,16 @@ separate optimization.
 ```
 
 Adaptive choices of single-mode measurements are not needed for the lower bound. Their capacity lies between $`Q_1`$ and $`Q_{\rm coll}`$, so it inherits the same leading law and constant-gap upper comparison without an exact characterization.
+
+**Number-preserving blocks, $`Q_{\le m}`$.** Partition the collected modes
+into predetermined disjoint blocks of at most $`m`$ modes. A block may use
+any POVM whose effects commute with its total photon number. The choices are
+fixed before communication and may depend on the known channel parameters
+and energy budget. Quantum operations act separately on the designated blocks.
+The receiver can retain their entire classical record and use an arbitrary
+decoder. The case $`m=1`$ gives the counting capacity because every one-mode
+number sector is one-dimensional. The [detector-width proof](detector_width.md)
+states the corresponding rate and the scope of the passive-mixer comparison.
 
 ## Entropy and notation
 
@@ -80,7 +90,7 @@ Q_1(E)\ge
 \frac1{1+2aE}+\frac1{1+2(1-b)E}\right]-g(bE)\right\}.
 ```
 
-Consequently $`0\le Q_{\rm coll}-Q_1\le\log_2e`$ for every finite energy. All three capacities vanish when $`a\le b`$.
+Consequently $`0\le Q_{\rm coll}-Q_1\le\log_2e`$ for every finite energy. All detector capacities vanish when $`a\le b`$.
 
 For fixed $`0\lt a\lt 1`$, let $`b_0=\frac12\min\{a,1-a\}`$. Uniformly over $`E\ge1`$ and $`0\le b\le b_0`$, with $`L=\min\{E,1/b\}`$ and $`1/0=\infty`$,
 
@@ -90,3 +100,14 @@ Q_{\rm cnt}(E)=\frac12\log_2L+O_a(1),
 ```
 
 The [finite counting bounds](counting_bounds.md) establish both sides without a peak constraint. The constants may depend on the fixed received fraction, not on $`E`$ or $`b`$. The leading-factor comparison concerns $`L\to\infty`$, not a fixed-loss energy limit. [Boundary cases and the finite comparison](uniform_laws.md) complete the statement.
+
+In the same uniform domain the [detector-width result](detector_width.md) gives
+
+```math
+Q_{\le m}(E,b)
+=\left(1-\frac{1}{2m}\right)\log_2 L+O_a(1)
+\qquad (m=1,2,\ldots).
+```
+
+The remainder depends only on the fixed received fraction $`a`$. The
+converse permits arbitrary endpoint codes and uses the mean signal budget.

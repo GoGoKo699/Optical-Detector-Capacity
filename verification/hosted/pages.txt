@@ -10,6 +10,7 @@ science/capacity_reduction.md
 science/coherent_measurements.md
 science/counting_bounds.md
 science/detector_resources.md
+science/detector_width.md
 science/direct_reference.md
 science/finite_reference.md
 science/interpretation.md
