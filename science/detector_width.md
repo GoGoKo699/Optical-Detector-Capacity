@@ -4,7 +4,7 @@
 
 Suppose the helper measures disjoint, predetermined blocks of at most $`m`$ collected modes. Every effect of a block measurement commutes with each spectral projector of the total photon number of that block. It measures each block independently with settings fixed in advance, and sends a classical record to the receiver. The sender and receiver can use arbitrary endpoint codes. Within a total-number sector the helper can use general coherent control.
 
-Fix $`0<a<1`$, $`E\ge1`$, and $`0\le b\le \min\{a,1-a\}/2`$, and write $`c=1-a-b`$, $`L=\min\{E,1/b\}`$, and $`1/0=\infty`$. The quantum capacity per original mode satisfies
+Fix $`0\lt a\lt 1`$, $`E\ge1`$, and $`0\le b\le \min\{a,1-a\}/2`$, and write $`c=1-a-b`$, $`L=\min\{E,1/b\}`$, and $`1/0=\infty`$. The quantum capacity per original mode satisfies
 
 ```math
 Q_{\le m}(E,b)=\left(1-\frac{1}{2m}\right)\log_2 L+O_a(1).
@@ -22,7 +22,7 @@ For each block the coherent information is concave in its average input. Global 
 
 ## Converse: one count and its number sectors
 
-Conditional on the total input occupation $`N`$, the triple $`(J,W,K)`$ has the ordinary multinomial law with fractions $`(a,b,c)`$. This holds for every input state within a fixed $`N`$ sector. Indeed, the product splitter intertwines a common passive $`U(r)`$ on the input and on its three outputs. The probability effect for any fixed output totals commutes with the irreducible representation on $`\operatorname{Sym}^N(\mathbb C^r)`$, so is scalar. Its value comes from sending all $`N`$ photons through one mode.
+Conditional on the total input occupation $`N`$, the triple $`(J,W,K)`$ has the ordinary multinomial law with fractions $`(a,b,c)`$. This holds for every input state within a fixed $`N`$ sector. Indeed, the product splitter intertwines a common passive $`U(r)`$ on the input and on its three outputs. The probability effect for any fixed output totals commutes with the irreducible representation on $`\mathrm{Sym}^N(\mathbb C^r)`$, so is scalar. Its value comes from sending all $`N`$ photons through one mode.
 
 Write the block coherent information as
 ```math
@@ -57,17 +57,17 @@ Use $`m`$ independent thermal average inputs of mean $`L`$. Given collected tota
 
 Conditional on $`J=j,K=k`$, both individual sector marginals are maximally mixed by common $`U(m)`$ covariance. The corresponding $`BD`$ state is uniform on a subspace of rank $`d_m(j+k)`$. Indeed, after tracing $`Z`$ one can first attenuate to the retained thermal modes with fraction $`a+c`$, then split those into $`B,D`$. On the total $`j+k`$ sector, the component of this splitter with totals $`j,k`$ is proportional to an isometry by covariance and irreducibility. Conditional on $`k`$, the $`BD`$ state is a direct sum over $`j`$, since the thermal input was already total-number diagonal. Consequently
 ```math
-\operatorname{Tr}\rho_{BD|k}^2
+\mathrm{Tr}\rho_{BD|k}^2
 =\sum_j\frac{p_j^2}{d_m(j+k)}
 \le\sum_j\frac{p_j^2}{d_m(j)}
-=\operatorname{Tr}\rho_{B|k}^2.
+=\mathrm{Tr}\rho_{B|k}^2.
 ```
 
 The helper marginal at $`k`$ is maximally mixed on a sector of dimension $`d=d_m(k)`$. For a vector of fourth-root phases $`(\eta_\ell)_{\ell=0}^{d-1}`$, measure in the orthonormal basis with components $`d^{-1/2}\eta_\ell\exp(2\pi i u\ell/d)`$, for $`u=0,\ldots,d-1`$. Its outcomes at this thermal input are uniform. Write $`C_{\ell t}`$ for the helper occupation-basis blocks of $`\rho_{BD|k}`$. Averaging the conditional receiver purity over independent uniform fourth-root phases leaves two paired terms in the phase expansion and subtracts the common diagonal term. For each $`u`$, the result is
 ```math
-\operatorname{Tr}\rho_{B|k}^2+\operatorname{Tr}\rho_{BD|k}^2
--\sum_\ell \operatorname{Tr} C_{\ell\ell}^2
-\le 2\operatorname{Tr}\rho_{B|k}^2.
+\mathrm{Tr}\rho_{B|k}^2+\mathrm{Tr}\rho_{BD|k}^2
+-\sum_\ell \mathrm{Tr} C_{\ell\ell}^2
+\le 2\mathrm{Tr}\rho_{B|k}^2.
 ```
 The fixed Fourier factors cancel on every surviving pairing. This is the [same phase moment](coherent_measurements.md#exact-phase-averaged-purity) used for the coherent single-mode detector. Choose one deterministic mask in each $`k`$ sector whose mean purity over basis outcomes is at most the phase average. The measurement is now fixed and reports $`(k,u)`$. This direct sum of sector basis changes preserves total number. On finite occupied support it can be implemented by a number-preserving basis change followed by occupation counting.
 
@@ -80,7 +80,7 @@ Let $`\alpha=\tfrac12\ln(1+\frac{a}{2-a}(1-\exp(-1)))>0`$. If $`j<\alpha s`$, Ma
 \exp(-\alpha s)\sqrt{s}(s/m)^{m-1}
 \le \sqrt m\, [x\exp(-\alpha x)]^m\le C_a^m.
 ```
-Thus $`\operatorname{Tr}\rho_{B|k}^2\le\max_j[p_j/d_m(j)]\le C_a^m s^{-1/2}(s/m)^{-(m-1)}`$. Von Neumann entropy dominates collision entropy. Jensen applied to the average purity after the chosen basis gives
+Thus $`\mathrm{Tr}\rho_{B|k}^2\le\max_j[p_j/d_m(j)]\le C_a^m s^{-1/2}(s/m)^{-(m-1)}`$. Von Neumann entropy dominates collision entropy. Jensen applied to the average purity after the chosen basis gives
 ```math
 \mathbb E_u S(B_{k,u})\ge
 (m-\tfrac12)\log_2[(k+m)/m]-O_a(m).
