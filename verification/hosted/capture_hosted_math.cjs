@@ -215,7 +215,12 @@ async function run(args) {
           const prefix=String(index+1).padStart(4,'0')+'-'+viewport.width;
           const item={path:source.path,url:source.url,revision:args.revision,source_sha256:source.source_sha256,errors:[],math:[]};
           try {
-            const response=await page.goto(source.url,{waitUntil:'domcontentloaded',timeout:60000});
+            let response=await page.goto(source.url,{waitUntil:'domcontentloaded',timeout:60000});
+            // Retry a temporary service error at the same pinned URL.
+            if(response?.status()===503) {
+              await new Promise(resolve=>setTimeout(resolve,2000));
+              response=await page.goto(source.url,{waitUntil:'domcontentloaded',timeout:60000});
+            }
             if(response?.status()!==200) throw new Error('HTTP '+response?.status());
             if(page.url()!==source.url) throw new Error('Browser redirected away from exact pinned source URL');
             const article=page.locator('article.markdown-body').first();

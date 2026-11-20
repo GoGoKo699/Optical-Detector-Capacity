@@ -4,7 +4,7 @@
 
 **Can reading lost light one mode at a time recover the leading quantum communication rate?** Yes, but photon counting and coherent measurements have different limits.
 
-A vacuum optical splitter sends a fraction $`a`$ of the signal to the receiver, a fraction $`b`$ to an inaccessible output, and $`c=1-a-b`$ to a helper. The helper measures its output and sends only a classical record to the receiver. The signal budget is $`E`$ mean photons per original mode. Both detector classes permit arbitrary sender and receiver block codes.
+A vacuum optical splitter sends a fraction $`a`$ of the signal to the receiver, a fraction $`b`$ to an inaccessible output, and $`c=1-a-b`$ to a helper. The helper measures its output and sends only a classical record to the receiver. The signal budget is $`E`$ mean photons per original mode. All detector classes permit arbitrary sender and receiver block codes.
 
 For fixed $`0\lt a\lt 1`$, increasing energy and approaching complete collection give, uniformly with $`L=\min\{E,1/b\}`$ and $`1/0=\infty`$,
 
@@ -26,6 +26,18 @@ Thus joint processing across collected modes improves on the best individual-mod
 
 The [coherent detector](science/coherent_measurements.md) can use one preselected quadratic phase followed by a finite Fock-space Fourier measurement, with fewer than $`2d`$ occupied outcomes at cutoff dimension $`d`$. A [three-outcome example](science/qubit_optical_bridge.md) already separates coherent detection from optimized counting under a two-photon input cutoff. The full leading-rate theorem concerns the larger, mean-energy-only input class.
 
+## How much does joint detection recover without exchanging photons?
+
+In the [number-preserving detector model](science/detector_width.md), the helper divides the collected modes into predetermined disjoint blocks of at most $`m`$ modes. Within a block it can measure superpositions of different photon occupations with the same total photon number. The optimized rate per original mode is
+
+```math
+Q_{\le m}(E,b)=\left(1-\frac{1}{2m}\right)\log_2 L+O_a(1).
+```
+
+The remainder is uniform in $`m\ge1`$, $`E\ge1`$, and $`0\le b\le\frac12\min\{a,1-a\}`$ at fixed $`a`$. One mode gives counting. Two modes raise the leading coefficient to $`3/4`$. A block width of order $`\log L`$ suffices for a bounded gap to the collective benchmark, and any bounded gap requires width $`\Omega(\log L)`$.
+
+The construction uses a predetermined Fourier basis with phases chosen within each total-number sector. A fixed passive interferometer on the designated collected modes followed by ordinary occupation counting gives the counting capacity by splitter covariance.
+
 ## How much phase reference is needed?
 
 The [reference-energy extension](science/reference_mean_bounds.md) charges the apparatus that enables coherent detection. Let $`M`$ be its average **initial mean photon number per channel use**. The initial apparatus is independent of the encoded signal, and each effective helper measurement preserves every local total $`N_{D_i}+N_{W_i}`$. Classical records remain unrestricted. Under this separate-local-invariance contract,
@@ -38,7 +50,7 @@ Q_{\rm loc}^{\rm mean}(E,M)
 
 The formula holds uniformly for fixed $`0\lt a\lt 1`$, $`E\ge1`$, $`M\ge0`$, $`0\le b\le\frac12\min\{a,1-a\}`$, and $`bE\le1`$. It characterizes capacity to an additive constant depending only on $`a`$.
 
-Counting supplies the half-logarithmic rate without a coherent reference. A bounded additive gap to the full logarithm is attainable with $`M=O(E)`$ and requires $`M=\Omega(E)`$. The [construction](science/direct_reference.md) uses fresh finite sine references; the converse includes arbitrary endpoint codes and references with infinite variance. Merely preserving the sum of all modes' photon numbers is a broader operation class, outside this profile.
+Counting supplies the half-logarithmic rate in this local detector model. A bounded additive gap to the full logarithm is attainable with $`M=O(E)`$ and requires $`M=\Omega(E)`$. The [construction](science/direct_reference.md) uses fresh finite sine references; the converse includes arbitrary endpoint codes and references with infinite variance. The block-width law above uses conservation of a block total and general control within each total-number sector.
 
 The [resource account](science/detector_resources.md) separately quantifies the required classical record, cutoff, and control accuracy. The [support-width bound](science/reference_width_bounds.md) distinguishes reference spread from mean stock, and the [conserving realization](science/finite_reference.md) makes the detector's photon exchange explicit. These results price prepared photons and transmitted records; they do not determine preparation work, reset cost, or sustained coherent reuse.
 
@@ -63,6 +75,7 @@ Start with the [physical model and claims](science/model.md), then follow the [c
 | What information, controls, and energy are supplied? | [Model](science/model.md) |
 | Why do arbitrary codes obey the entropy bounds? | [Operational reduction](science/capacity_reduction.md) |
 | Why do the two detector classes have different leading rates? | [Counting bounds](science/counting_bounds.md) and [coherent construction](science/coherent_measurements.md) |
+| What rate does a number-preserving detector recover at each block width? | [Detector-width law](science/detector_width.md) |
 | Where does the qubit counting optimum first fail? | [Two-photon separation](science/qubit_optical_bridge.md) |
 | What is uniform as energy and inaccessible loss vary? | [Uniform laws](science/uniform_laws.md) |
 | What does a finite apparatus budget buy? | [Mean-reference capacity profile](science/reference_mean_bounds.md) and [connected resource proofs](science/README.md) |
@@ -76,9 +89,9 @@ Start with the [physical model and claims](science/model.md), then follow the [c
 | Account | Question and contribution |
 |---|---|
 | Partial Monitoring Capacity | Exact partially monitored capacities, including the optimum over predetermined product helper measurements in the qubit model and its strict separation from unrestricted collective measurements. |
-| Optical Detector Capacity | Counting versus coherent individual-mode measurements in the full optical model, the first failure of qubit counting optimality at a two-photon cutoff, and the stated detector-resource profiles. |
+| Optical Detector Capacity | Counting versus coherent individual-mode measurements in the full optical model, the first failure of qubit counting optimality at a two-photon cutoff, the number-preserving detector-width law, and the stated detector-resource profiles. |
 
-The [qubit-to-optical bridge](science/qubit_optical_bridge.md) makes the comparison concrete. Counting optimality with at most one input excitation does not extend to two excitations or to unrestricted optical inputs. Coherence among photon numbers within one mode and joint measurements across channel uses are different operations; both projects retain arbitrary sender and receiver block codes. The inherited collective benchmark is credited to Partial Monitoring, while the optical detector and reference-budget results have their proofs here.
+The [qubit-to-optical bridge](science/qubit_optical_bridge.md) makes the comparison concrete. Counting optimality with at most one input excitation does not extend to two excitations or to unrestricted optical inputs. Coherence among photon numbers within one mode and joint measurements across channel uses are different operations; both projects retain arbitrary sender and receiver block codes. The inherited collective benchmark is credited to Partial Monitoring, while the optical detector, detector-width, and reference-budget results have their proofs here.
 
 Each repository supplies its own model, scientific route, and thirty-milestone learning map. The sister links connect the results without adding a prerequisite reading assignment.
 
@@ -86,7 +99,7 @@ Each repository supplies its own model, scientific route, and thirty-milestone l
 
 The single educational anchor is **John Preskill, *Quantum Shannon Theory*, Chapter 10, arXiv:1604.07450v5** (updated June 2025; posted 8 July 2025). The [learning entrance](learning/README.md) gives a focused route rather than a whole-chapter assignment.
 
-The [30-milestone map](learning/MILESTONES.md) connects **14 background/preliminaries milestones** to **16 narrative/innovation milestones**. It progresses from optical states and entropy through the detector comparison to the finite-reference capacity profile. Every milestone has an understanding target, earlier dependencies, a conceptual connection, and source pointers.
+The [30-milestone map](learning/MILESTONES.md) connects **14 background/preliminaries milestones** to **16 narrative/innovation milestones**. It progresses from optical states and entropy through the detector comparison to the width and finite-reference capacity laws. Every milestone has an understanding target, earlier dependencies, a conceptual connection, and source pointers.
 
 The [Preskill bridge](learning/PRESKILL_BRIDGE.md) translates notation, works through an explicit counting channel, and explains the additional optical, finite-energy, and detector arguments. In particular, Preskill's one-use coherent-information quantity is not this project's individual-mode helper capacity. The science pages remain the authoritative proofs; the learning route does not replace their assumptions or primary-source attribution.
 

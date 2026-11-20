@@ -2,7 +2,7 @@
 
 [Learning entrance](README.md) · [Thirty milestones](MILESTONES.md) · [Exact model](../science/model.md) · [Proof route](../science/README.md)
 
-The project compares three ways of reading collected light while keeping the same signal channel and endpoint coding resources. It then charges the finite phase reference used by a coherent detector. This bridge connects the optical mechanisms and apparatus constraints to entropy and channel coding. The exact proofs remain in `science/`.
+The project compares ways of reading collected light while keeping the same signal channel and endpoint coding resources. A helper can mix occupations within a block at fixed total photon number, or use a prepared phase reference to mix different photon numbers at an individual mode. This bridge connects those operations to entropy and channel coding. The exact proofs remain in `science/`.
 
 <a id="sources"></a>
 ## Source and focused reading map
@@ -20,7 +20,7 @@ The project compares three ways of reading collected light while keeping the sam
 | 10.9; 10.9.4 | 68–76 | Optional second-moment and coding perspective |
 | 10.10 | 78–79 | Background synthesis after working through the project |
 
-The optical counting converses, phase POVM, constant-gap comparison, and reference-resource profiles are additional arguments. They are not results attributed to the chapter. The precise infinite-dimensional coding ingredient is the Wilde–Qi theorem; the phase designs and conserving reference constructions also retain their primary attributions in [Related work](../references/RELATED_WORK.md). Preskill remains the single educational anchor.
+The optical counting converses, phase POVM, constant-gap comparison, detector-width law, and reference-resource profiles are additional arguments. They are not results attributed to the chapter. The precise infinite-dimensional coding ingredient is the Wilde–Qi theorem; the phase designs and conserving reference constructions also retain their primary attributions in [Related work](../references/RELATED_WORK.md). Preskill remains the single educational anchor.
 
 <a id="notation"></a>
 ## Translate notation before using a capacity formula
@@ -293,6 +293,23 @@ This profile has unrestricted classical records and holds for fixed $`0\lt a\lt 
 
 Linear mean stock suffices for a bounded additive rate gap, and such a gap requires $`M=\Omega(E)`$ within this model. Leading coefficient one is weaker: $`M=E/\log E`$ still leaves a growing logarithmic-of-logarithmic gap. The mean profile and the separate classical-record profile do not jointly optimize both resource budgets.
 
+<a id="detector-width"></a>
+## Joint detection at fixed total photon number
+
+With two collected modes and one photon in total, the occupation states $`|1,0\rangle`$ and $`|0,1\rangle`$ have the same total number. A joint detector may measure their sum and difference. A measurement of each occupation first would distinguish the paths and lose the relative phase. For a general total $`K`$, there are $`K+1`$ such occupation states for two modes. More modes make this fixed-total space larger.
+
+The width proof refines the helper record by $`K`$, the total collected count. The receiver and the inaccessible field have their own totals, $`J`$ and $`W_{\rm loss}`$. Attenuation thins the receiver's total to the inaccessible total. The same entropy bounds as for one-mode counting therefore control the contribution of the totals. For blocks of size $`m`$ at the mean signal budget, this gives a leading $`\frac12\log_2 L`$ **per block**. The occupation states inside each number sector give a term of up to $`(m-1)\log_2 L`$ per block. The converse allows unequal energies across blocks and averages them under the overall mean constraint. The thermal input and a fixed, phase-decorated Fourier basis in each helper sector attain the sum to a bounded error per mode.
+
+For disjoint predetermined blocks of at most $`m`$ modes, the result per original mode is
+
+```math
+Q_{\le m}(E,b)=\left(1-\frac{1}{2m}\right)\log_2 L+O_a(1).
+```
+
+The remainder is uniform in $`m`$, signal energy, and inaccessible loss in the [stated domain](../science/detector_width.md). At $`m=2`$ the coefficient is $`\frac34`$. The gap to the collective benchmark is $`\log_2 L/(2m)+O_a(1)`$, so width of order $`\log_2 L`$ suffices for a bounded gap. Any fixed additive gap requires at least that order of width.
+
+This measurement class allows general operations within a fixed-number sector. A single predetermined passive mode mixer followed by ordinary occupation counting has the counting capacity. The same mixer can be moved through the identical splitters and its effect absorbed by the endpoint codes. See the [detector-width proof](../science/detector_width.md).
+
 <a id="synthesis"></a>
 ## Assemble the result and its boundaries
 
@@ -306,4 +323,4 @@ Thus photon-number coherence within an individual collected mode is enough for t
 
 The [finite certificates](../verification/README.md) evaluate proved inequalities. The unrestricted optical example uses a mean budget; the [two-photon example](../science/qubit_optical_bridge.md) imposes an additional per-mode cutoff. Neither is an experimental implementation or a numerical substitute for an all-input proof.
 
-The finite-reference analysis strengthens the physical account: prepared reference photons can be charged, and their mean determines the local-conservation capacity profile to an additive constant. The [interpretation](../science/interpretation.md) and [attribution](../references/RELATED_WORK.md) keep the underlying operation contracts, inherited ingredients, and unoptimized synthesis, preparation, and reset costs explicit.
+The finite-reference analysis charges prepared reference photons and gives the local-conservation capacity profile to an additive constant. The [detector-width law](#detector-width) gives the corresponding rate tradeoff for joint number-preserving detection. The [interpretation](../science/interpretation.md) and [attribution](../references/RELATED_WORK.md) keep the underlying operation contracts, inherited ingredients, and unoptimized synthesis, preparation, and reset costs explicit.

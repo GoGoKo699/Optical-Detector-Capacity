@@ -327,7 +327,7 @@ noisy coarse graining, subtracting only the old $`Z`$ entropy could omit part of
 the true complement and would not justify this rate bound.
 
 For the ideal unitary $`U=\mathcal F_qD_s`$, an implementation with
-$`\|\widetilde U-U\|\le\varepsilon`$ on the occupied input subspace gives
+$`\left\|\widetilde U-U\right\|\le\varepsilon`$ on the occupied input subspace gives
 the required trace-distance bound by contraction under measurement and partial
 trace. For example, let $`\varepsilon_F`$ bound the Fourier operator error,
 and let the diagonal phase differ by $`\Delta\theta k+\Delta\chi k^2`$ on

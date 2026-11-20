@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Scientific route](../science/README.md) · [Bibliography](references.bib)
 
-The contribution is the optimized **detector-class comparison** for the vacuum splitter: an input-uniform counting converse, a matching half-logarithmic construction, and a finite single-mode coherent measurement within a constant of the collective capacity. Environmental assistance, flagged-channel coding, random-phase ensembles, Gaussian entropy formulas, and the qualitative benefit of non-Gaussian measurements are established ingredients.
+The contribution is the optimized **detector-class comparison** for the vacuum splitter: an input-uniform counting converse, a matching half-logarithmic construction, a finite single-mode coherent measurement within a constant of the collective capacity, and the matched capacity law for number-preserving helper blocks. Environmental assistance, flagged-channel coding, random-phase ensembles, Gaussian entropy formulas, and the qualitative benefit of non-Gaussian measurements are established ingredients.
 
 ## The closest internal antecedent
 
@@ -50,10 +50,20 @@ physical principle; the lossy-helper all-code mean-stock profile is a different
 capacity optimization.
 
 Zhuang, [Quantum-enabled communication without a phase reference](https://arxiv.org/abs/2010.11974v2),
-Physical Review Letters **126**, 060502 (2021), Eqs. (1)–(5), treats a phase
-shared across a block of modes and obtains quantum-capacity results controlled
-by the phase-noise correlation length. Fanizza, Rosati, Skotiniotis, Calsamiglia,
-and Giovannetti,
+Physical Review Letters **126**, 060502 (2021), treats an unknown phase
+shared across a transmitted block of $`m`$ modes. In its pure phase-twirling
+case, Eq. (5a) and Appendix B.2, Eqs. (44)–(56), give a rate governed by the
+dimension of a fixed-total photon-number sector. At fixed $`m`$, this gives
+a leading coefficient $`1-1/m`$ per transmitted mode at high energy.
+Appendix D.2 gives bounds when attenuation and thermal noise are present.
+The [detector-width law](../science/detector_width.md) uses the same
+fixed-total sector geometry in an outgoing helper measurement. The helper
+total only estimates the receiver total, and the residual count fluctuation
+contributes an additional half-logarithm per block after accounting for loss.
+That yields the coefficient $`1-1/(2m)`$ and the crossover at the
+inaccessible-loss scale in the vacuum-splitter model.
+
+Fanizza, Rosati, Skotiniotis, Calsamiglia, and Giovannetti,
 [Squeezing-enhanced communication without a phase reference](https://arxiv.org/abs/2006.06522v4),
 Quantum **5**, 608 (2021), Section 6 and Appendix C, explicitly account for a
 transmitted reference pulse's energy in classical/Gaussian communication. These
@@ -88,8 +98,8 @@ Wang and Jiang, [Passive environment-assisted quantum communication with GKP sta
 
 The detector-capacity account combines residual-variance and thinning converses uniform over all finite-mean photon distributions, their match by a negative-binomial counting construction, a one-mode purity bound, and the resulting uniform energy/loss crossover and finite-energy capacity separation. Its structured detector application uses the inherited phase designs above and selects a single setting. The [two-photon example](../science/qubit_optical_bridge.md) supplies a certified finite-cutoff comparison with optimized counting. The elementary entropy inequalities are derived locally as tools, without a separate priority claim for those inequalities. The collective capacity, general assistance methodology, and phase-design constructions retain their source attribution.
 
-The principal consequence distinguishes coherence *within* one collected mode from coherent processing *across* many modes. The [mean-reference profile](../science/reference_mean_bounds.md) strengthens that story in the separate-local-conservation architecture: an optical first-moment residual bound matches the direct finite-reference construction, including arbitrary mean-constrained tails. Its linear initial-stock requirement concerns a bounded additive rate gap, rather than leading coefficient one alone. It does not assert that Gaussian detectors are optimal, that every non-Gaussian detector helps, or that the exhibited finite POVM has an efficient implementation.
+The [detector-width law](../science/detector_width.md) gives the matching capacity of each number-preserving block size, using an aggregate-count converse, a within-sector entropy converse, and a fixed sector measurement. The uniform gap determines how many modes must be measured together to approach the collective benchmark. The principal consequence distinguishes coherence *within* one collected mode from coherent processing *across* many modes. The [mean-reference profile](../science/reference_mean_bounds.md) strengthens that story in the separate-local-conservation architecture: an optical first-moment residual bound matches the direct finite-reference construction, including arbitrary mean-constrained tails. Its linear initial-stock requirement concerns a bounded additive rate gap, rather than leading coefficient one alone. It does not assert that Gaussian detectors are optimal, that every non-Gaussian detector helps, or that the exhibited finite POVM has an efficient implementation.
 
 ## Coverage of the comparison
 
-The assistance, energy-constrained coding, Gaussian localization, and optical environment-access comparison was checked on **28 October 2026**. The quadratic-phase and finite-cutoff comparisons were checked on **29 October 2026**, including the primary design theorems, Kerr-phase formula, and qutrit recovery equations linked above. Searches included bosonic environmental monitoring, photon-counting quantum capacity, single-mode assistance, qutrit environmental measurement, and toric phase designs. No inspected source supplied the same all-input detector-class law under the stated access and energy contract. This is a bounded comparison, not an exhaustive priority certificate. PDF text was available for the principal earlier comparisons; their recorded screenshot retrieval did not establish visual inspection. Unavailable figures were not used to establish a theorem comparison.
+The assistance, energy-constrained coding, Gaussian localization, and optical environment-access comparison was checked on **28 October 2026**. The quadratic-phase and finite-cutoff comparisons were checked on **29 October 2026**, including the primary design theorems, Kerr-phase formula, and qutrit recovery equations linked above. Searches included bosonic environmental monitoring, photon-counting quantum capacity, single-mode assistance, qutrit environmental measurement, and toric phase designs. The detector-width comparison was updated on **20 November 2026** using Zhuang's Eqs. (1)–(5) and Appendices B.2 and D.2, and the outgoing-helper and relational-phase comparisons above. The closest inspected rate laws concern phase twirling on the transmitted signal or unrestricted environment assistance. This is a bounded comparison, not an exhaustive priority certificate. PDF text was available for the principal earlier comparisons; their recorded screenshot retrieval did not establish visual inspection. Unavailable figures were not used to establish a theorem comparison.

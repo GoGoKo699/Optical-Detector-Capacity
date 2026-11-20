@@ -24,7 +24,27 @@
     },
     {
       "path": "README.md",
-      "index": 21,
+      "index": 20,
+      "source_sha256": "93c5019ed4e86af0119b61122381138ffdca793fe72b21f600142747dd855df4",
+      "required_text": [
+        "Q≤m(E,b)",
+        "log2L",
+        "Oa(1)"
+      ]
+    },
+    {
+      "path": "science/detector_width.md",
+      "index": 8,
+      "source_sha256": "93c5019ed4e86af0119b61122381138ffdca793fe72b21f600142747dd855df4",
+      "required_text": [
+        "Q≤m(E,b)",
+        "log2L",
+        "Oa(1)"
+      ]
+    },
+    {
+      "path": "README.md",
+      "index": 30,
       "source_sha256": "e985185c652a0038e0dc7840a07ff69b652debebf2e4536c0fbda78ad318ee8b",
       "expected_text": "Qlocmean(E,M)=min{log2E,max{12log2E,log2(M+1)}}+Oa(1).",
       "required_text": [

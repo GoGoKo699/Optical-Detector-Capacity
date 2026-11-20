@@ -106,14 +106,14 @@ $`\mathcal U_\theta=\mathrm{Ad}_{U_\theta}`$,
 =\mathcal L^2\mathcal U_\theta
  -2\mathcal L\mathcal U_\theta\mathcal L
  +\mathcal U_\theta\mathcal L^2,
-\qquad \|\mathcal U_\theta''\|_\diamond\le4h^2.
+\qquad \left\|\mathcal U_\theta''\right\|_\diamond\le4h^2.
 ```
 
 Taylor expansion therefore has remainder at most $`2h^2\theta^2`$ in diamond
 norm. Evenness cancels the first-order term after integration. Thus
 
 ```math
-\frac12\|\mathcal E_{U,K}-\mathcal U\|_\diamond
+\frac12\left\|\mathcal E_{U,K}-\mathcal U\right\|_\diamond
 \le h^2\mathbb E_{p_K}[\theta^2].
 ```
 
@@ -130,7 +130,7 @@ On $`[-\pi,\pi]`$, $`\theta^2\le\pi^2\sin^2(\theta/2)`$. Combining the
 bounds gives the explicit sufficient estimate
 
 ```math
-\frac12\|\mathcal E_{U,K}-\mathcal U\|_\diamond
+\frac12\left\|\mathcal E_{U,K}-\mathcal U\right\|_\diamond
 \le\min\!\left\{1,\frac{\pi^2h^2\delta_K^2}{4}\right\}
 \le\min\!\left\{1,\frac{\pi^4h^2}{4(K+1)^2}\right\}.
 ```
